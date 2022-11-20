@@ -1,6 +1,6 @@
 # ignora nod modul
 /package-lock.json
 /node_modules
-
+/package-lock.json
 #ignora db
 /config/db/db.js
