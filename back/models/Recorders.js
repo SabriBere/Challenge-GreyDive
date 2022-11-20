@@ -26,7 +26,7 @@ Recorders.init({
     },
     //tiempo en que tardó el usuario en dar la respuesta
     time:{
-        type: DataTypes.STRING
+        type: DataTypes.TIME
     }
 },
     {

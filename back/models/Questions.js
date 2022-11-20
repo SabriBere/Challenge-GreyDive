@@ -5,9 +5,8 @@ class Questions extends Model { }
 
 
 Questions.init({
-    
     tipoTarea: {
-        type: DataTypes.INTEGER
+        type: DataTypes.STRING
     },
     texto: {
         type: DataTypes.TEXT
