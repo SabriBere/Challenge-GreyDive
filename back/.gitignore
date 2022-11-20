@@ -1,4 +1,5 @@
 # ignora nod modul
+/package-lock.json
 /node_modules
 
 #ignora db
