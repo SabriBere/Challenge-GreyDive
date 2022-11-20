@@ -11,14 +11,22 @@ Recorders.init({
     transcription: {
         type: DataTypes.TEXT
     },
+    opinionScale5:{
+        type: DataTypes.INTEGER
+    },
     urlVideo: {
         type: DataTypes.TEXT
     },
     transcription: {
         type: DataTypes.STRING
     },
-    task:{
+    //la tarea saldría del modelo questions
+    tipoTarea:{
         type: DataTypes.TEXT
+    },
+    //tiempo en que tardó el usuario en dar la respuesta
+    time:{
+        type: DataTypes.TIME
     }
 },
     {
