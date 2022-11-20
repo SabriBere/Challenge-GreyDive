@@ -1,20 +1,11 @@
 import { extendTheme } from "@chakra-ui/react";
 
 const theme = extendTheme({
-  fonts: {
-    heading: "'Roboto Mono', monospace",
-    body: "'Rubik', sans-serif, Releway",
-    footer: "Eiko-medium",
-    header: "'Inter', sans-serif",
-    NotFound:"'Permanent Marker'"
-  },
   colors: {
-    primary: "#2196F3", //celeste basico
-    secondary: "#FFFFFF", //blanco
-    bgSb: "#2195f387", //celeste clarito
-    bgH: "#8fccff81",  //celeste clarito
-    blackShadow: "#000000c9",
-    whiteSoft:"#FFFFFFc5"
+    navbar: "#e42c5a", //magenta
+    texto: "#FFFFFF", //blanco
+    fondo: "#1c1c23", //fondo
+    cards: "#505050",  //gris de las cards
   },
   breakpoints: {
     sm: "320px",
