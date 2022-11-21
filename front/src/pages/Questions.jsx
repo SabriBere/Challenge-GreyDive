@@ -1,16 +1,23 @@
-import React from 'react'
+import React, { useEffect, useState } from "react";
 import { VerbalResponse, OpinionScale5} from '../components/Questions/CardQuestions'
-//consultar al back
+import {useSelector, useDispatch} from "react-redux"
+import {getAllQuestions} from "../redux/questions"
 
 const tipoTarea = "verbalResponse"
 
- // tipoTarea === "verbalResponse" ? VerbalResponse : OptionScale5 
- //
-
 const Questions = () => {
-  return tipoTarea === "verbalResponse"  ? (
+
+  const dispatch = useDispatch()
+  const questions = useSelector((state) => state.questions);
+
+  useEffect(()=>{
+    dispatch(getAllQuestions())
+  },[])
+
+//hacer un map
+
+return questions === "verbalResponse"  ? (
     <VerbalResponse/>
-    
   ) : (
     <OpinionScale5/>
   )
