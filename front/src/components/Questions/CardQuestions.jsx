@@ -3,7 +3,7 @@ import { Flex, Text } from "@chakra-ui/react";
 import { ButtonContinue, ButtonOptions } from "./Buttons";
 import TitleTask from "./TitleTask";
 
-export const VerbalResponse = () => {
+export const VerbalResponse = ({item}) => {
   return (
     <Flex
       width={{ md1: "50%", base: "80%" }}
@@ -23,8 +23,7 @@ export const VerbalResponse = () => {
         color="texto"
         fontSize="20px"
       >
-        Necesitas comprar zapatillas, entonces decidís visitar el sitio web de
-        Viamo.
+        {item.texto}
       </Text>
       <Flex alignContent="center" justifyContent="center" mt ="100px">
       <ButtonContinue />
@@ -33,7 +32,7 @@ export const VerbalResponse = () => {
   );
 };
 
-export const OpinionScale5 = () => {
+export const OpinionScale5 = ({item}) => {
   return (
     <Flex
       width={{ md1: "50%", base: "80%" }}
@@ -53,8 +52,7 @@ export const OpinionScale5 = () => {
         color="texto"
         fontSize="20px"
       >
-        De todo lo que vistes hasta ahora: <br />
-        Del 1 al 5 cuánto te motiva a comprar
+        {item.texto}
       </Text>
 
       <ButtonOptions />
