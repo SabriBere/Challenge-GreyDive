@@ -8,13 +8,24 @@ export const VerbalResponse = ({item}) => {
     <Flex
       width={{ md1: "50%", base: "80%" }}
       height="450px"
-      mt="50px"
+      margin="auto"
       flexDirection="column"
       bg="cards"
       borderRadius="0.5rem"
       boxShadow="0px 5px 10px 0px #000"
+      // border="red solid"
     >
-      <TitleTask />
+      <Flex
+      alignContent="center"
+      justifyContent="center"
+      mt="30px"
+      color="texto"
+      fontSize="25px"
+      fontWeight="bold"
+      // border="red solid"
+    >
+      <Text>Tarea {item.id} de 40</Text>
+    </Flex>
       <Text
         height="100px"
         mt="50px"
@@ -37,13 +48,25 @@ export const OpinionScale5 = ({item}) => {
     <Flex
       width={{ md1: "50%", base: "80%" }}
       height="450px"
-      mt="50px"
+      margin="auto"
       flexDirection="column"
       bg="cards"
       borderRadius="0.5rem"
       boxShadow="0px 5px 10px 0px #000"
+      // border="red solid"
+      
     >
-      <TitleTask />
+      <Flex
+      alignContent="center"
+      justifyContent="center"
+      mt="30px"
+      color="texto"
+      fontSize="25px"
+      fontWeight="bold"
+      // border="red solid"
+    >
+      <Text>Tarea {item.id} de 40</Text>
+    </Flex>
       <Text
         height="100px"
         mt="50px"
@@ -68,7 +91,7 @@ export const OpinionScale5 = ({item}) => {
 export const CardInstructions = () => {
   return (
     <Flex
-      width={{ md1: "50%", base: "80%" }}
+      width="70%"
       height="450px"
       mt="70px"
       flexDirection="column"
@@ -76,7 +99,18 @@ export const CardInstructions = () => {
       borderRadius="0.5rem"
       boxShadow="0px 5px 10px 0px #000"
     >
-      <TitleTask />
+      <Text
+        height="100px"
+        mt="50px"
+        padding="15px"
+        textAlign="center"
+        color="texto"
+        fontSize="25px"
+        fontWeight="bold"
+      >
+       Importante
+      </Text>
+      <br />
       <Text
         height="100px"
         mt="50px"
@@ -85,11 +119,12 @@ export const CardInstructions = () => {
         color="texto"
         fontSize="20px"
       >
-        Necesitas comprar zapatillas, entonces decidís visitar el sitio web de
-        Viamo.
+       Recurda decir en voz alta todo lo que piensas mientras realizas las tareas
       </Text>
+
 
       <ButtonContinue />
     </Flex>
+    
   );
 };
