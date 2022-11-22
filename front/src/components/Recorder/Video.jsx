@@ -1,33 +1,50 @@
-import React from 'react'
+import React from "react";
 import { useReactMediaRecorder } from "react-media-recorder";
-import { Button } from '@chakra-ui/react';
-import useInput from '../../hooks/useInput';
-import { fetchApi } from '../../config/axiosInstance';
+import { Button, Flex, CircularProgress } from "@chakra-ui/react";
+import { fetchApi } from "../../config/axiosInstance";
 
 const Video = () => {
-
-    const { status, startRecording, stopRecording, ...mediaBlobUrl} =
-    useReactMediaRecorder({ 
-        screen: true,
-        type: "video/mp4",
-        // onStop: (blobUrl, blob) => {
-        //     const url = URL.createObjectURL(blob)
-        //     console.log(url)
-        // }
+  const { status, startRecording, stopRecording, ...mediaBlobUrl } =
+    useReactMediaRecorder({
+      screen: true,
+      type: "video/mp4",
+      onStop: (blobUrl, blob) => {
+        const url = URL.createObjectURL(blob);
+        console.log(blob);
+        console.log(blobUrl, "es el video?");
+      },
     });
 
-    const url = mediaBlobUrl.mediaBlobUrl
-    //pasar al axios.  
+  // const url = mediaBlobUrl.mediaBlobUrl;
 
-    return (
-    <div>
-      <p>{status}</p>
-      <Button color="navbar" _selected={{ bg: "cards" }} onClick={startRecording} mr="20px">Empezar</Button>
-      <Button onClick={stopRecording} color="navbar" variant='outline'>Finalizar</Button>
+  //pasar al axios.
+  // alert(`Se genero correctamente la url: ${url}`)
+  // 
+
+  return (
+    <Flex margin="auto" pb="20px" width="25%" pt="20px">
+      <Button
+        colorScheme="none"
+        _selected={{ bg: "cards" }}
+        mr="20px"
+      >
+        {status === "idle" ? "Not Recording" : status === "recording" ? <CircularProgress isIndeterminate color='red.300' thickness='5px' /> : status === "stopped" ? "Stopped" : ""}
+      </Button>
+      <br />
+      <Button
+        color="navbar"
+        _selected={{ bg: "cards" }}
+        onClick={startRecording}
+        mr="20px"
+      >
+        Empezar
+      </Button>
+      <Button onClick={stopRecording} color="navbar" variant="outline">
+        Finalizar
+      </Button>
       <a src={mediaBlobUrl} controls autoPlay />
-    </div>
-  )
-  
-}
+    </Flex>
+  );
+};
 
-export default Video
+export default Video;
