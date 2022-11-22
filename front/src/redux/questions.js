@@ -6,12 +6,13 @@ export const getAllQuestions = createAsyncThunk("ALL_QUESTIONS", async () => {
       method: "get",
       url: "/api/questions/",
     });  
-    return res.data.data.rows
+    console.log(res.data.data.rows)
 });
 
 
 const questionsReducer = createReducer({}, {
   [getAllQuestions.fulfilled]: (state, action) => action.payload,
+  [getAllQuestions.rejected]: (state, action) => action.payload,
 });
 
 export default questionsReducer

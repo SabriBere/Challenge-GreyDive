@@ -9,7 +9,7 @@ const seedQuestions = [
       },
       {
         texto:
-          "De todo lo que viste hasta ahora:\\nDel 1 al 5 cuánto te motiva a comprar?",
+          "De todo lo que viste hasta ahora:\n\ Del 1 al 5 cuánto te motiva a comprar?",
         tipoTarea: "opinionScale5",
       },
       {
@@ -28,7 +28,7 @@ const seedQuestions = [
       {
         tipoTarea: "verbalResponse",
         texto:
-          "¿Compararías con otras marcas al realizar una compra de este tipo de productos?\\nEn caso de que si, contra qué marcas compararías?",
+          "¿Compararías con otras marcas al realizar una compra de este tipo de productos?\n\ En caso de que si, contra qué marcas compararías?",
       },
       {
         tipoTarea: "verbalResponse",
@@ -62,7 +62,7 @@ const seedQuestions = [
       {
         tipoTarea: "opinionScale5",
         texto:
-          "Con respecto a la descripción del producto, después de que leíste todo:\\nDel 1 al 5, ¿qué tanto te motiva la descripción a comprar este producto?",
+          "Con respecto a la descripción del producto, después de que leíste todo:\n\ Del 1 al 5, ¿qué tanto te motiva la descripción a comprar este producto?",
       },
       {
         tipoTarea: "verbalResponse",
@@ -84,12 +84,12 @@ const seedQuestions = [
       {
         tipoTarea: "verbalResponse",
         texto:
-          "Sobre toda esta página que estamos viendo:\\nSi tuvieses una varita mágica, ¿qué cambiarías de esta página?",
+          "Sobre toda esta página que estamos viendo:\n\ Si tuvieses una varita mágica, ¿qué cambiarías de esta página?",
       },
       {
         tipoTarea: "verbalResponse",
         texto:
-          "Estás pensando en comprar también otro producto.\\nBuscá tres que te gusten y comparalos.",
+          "Estás pensando en comprar también otro producto.\n\ Buscá tres que te gusten y comparalos.",
       },
       {
         tipoTarea: "verbalResponse",
@@ -106,30 +106,30 @@ const seedQuestions = [
       {
         tipoTarea: "verbalResponse",
         texto:
-          "Antes de seguir con la compra te gustaría saber cuáles son los medios de pago disponibles.\\nBuscá esa información.",
+          "Antes de seguir con la compra te gustaría saber cuáles son los medios de pago disponibles.\n\ Buscá esa información.",
       },
       {
         tipoTarea: "verbalResponse",
         texto:
-          "Te gustaría saber cuánto va a tardar el envío en llegar a tu domicilio.\\n¿Dónde podés encontrar esa información?",
+          "Te gustaría saber cuánto va a tardar el envío en llegar a tu domicilio.\n\ ¿Dónde podés encontrar esa información?",
       },
       {
         texto:
-          "Estás evaluando retirar la compra por algún local cercano.\\nAveriguá si se puede y qué locales hay disponibles.",
+          "Estás evaluando retirar la compra por algún local cercano.\n\ Averiguá si se puede y qué locales hay disponibles.",
         tipoTarea: "verbalResponse",
       },
       {
         tipoTarea: "verbalResponse",
         texto:
-          "Creés que a este sitio web le vendría bien comenzar a ofrecer gift cards?\\n¿Por qué?",
+          "Creés que a este sitio web le vendría bien comenzar a ofrecer gift cards?\n\ ¿Por qué?",
       },
       {
         tipoTarea: "verbalResponse",
-        texto: "Ahora vamos a finalizar la compra. ",
+        texto: "Ahora vamos a finalizar la compra.",
       },
       {
         texto:
-          "Seleccioná la opción de envío a domicilio y llená los datos.\\nLlegá hasta donde puedas, sin llenar los datos de tarjeta de crédito.",
+          "Seleccioná la opción de envío a domicilio y llená los datos.\n\ Llegá hasta donde puedas, sin llenar los datos de tarjeta de crédito.",
         tipoTarea: "verbalResponse",
       },
       {
