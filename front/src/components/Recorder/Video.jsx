@@ -28,7 +28,7 @@ const Video = () => {
         _selected={{ bg: "cards" }}
         mr="20px"
       >
-        {status === "idle" ? "Not Recording" : status === "recording" ? <CircularProgress isIndeterminate color='red.300' thickness='5px' /> : status === "stopped" ? "Stopped" : ""}
+        {status === "idle" ? "Not Recording" : status === "recording" ? "Recording" : status === "stopped" ? "Stopped" : ""}
       </Button>
       <br />
       <Button
