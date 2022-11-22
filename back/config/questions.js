@@ -9,13 +9,13 @@ const seedQuestions = [
       },
       {
         texto:
-          "De todo lo que viste hasta ahora:\n\ Del 1 al 5 cuánto te motiva a comprar?",
+          "De todo lo que viste hasta ahora:\n\ ¿Del 1 al 5 cuánto te motiva a comprar?",
         tipoTarea: "opinionScale5",
       },
       {
         tipoTarea: "opinionScale5",
         texto:
-          "Del 1 al 5 cuánto te motiva a recorrer el sitio y ver más productos?",
+          "Del 1 al 5 ¿Cuánto te motiva a recorrer el sitio y ver más productos?",
       },
       {
         tipoTarea: "verbalResponse",
@@ -28,7 +28,7 @@ const seedQuestions = [
       {
         tipoTarea: "verbalResponse",
         texto:
-          "¿Compararías con otras marcas al realizar una compra de este tipo de productos?\n\ En caso de que si, contra qué marcas compararías?",
+          "¿Compararías con otras marcas al realizar una compra de este tipo de productos?\n\ En caso de que si, ¿contra qué marcas compararías?",
       },
       {
         tipoTarea: "verbalResponse",

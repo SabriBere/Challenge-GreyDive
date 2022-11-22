@@ -1,12 +1,25 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Button, Grid, GridItem } from "@chakra-ui/react";
 const calificación = [1,2,3,4,5]
 
+
+//Hace el cambios de cards
 export const ButtonContinue = () => {
   return (
-      <Button bg="navbar" size="lg" color="texto" _hover={{ bg: "fondo" }}>
+      <Button bg="navbar" size="lg" color="texto" _hover={{ bg: "fondo" }} >
         Continuar
       </Button>
+  );
+};
+
+export const ButtonStart = () => {
+  return (
+    <Link to={"/questions"}>
+      <Button bg="navbar" size="lg" color="texto" _hover={{ bg: "fondo" }} >
+        Comenzar el test
+      </Button>
+    </Link>
   );
 };
 
