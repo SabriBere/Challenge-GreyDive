@@ -1,23 +1,19 @@
-import React, { useEffect, useState} from "react";
-import { VerbalResponse, OpinionScale5, CardInstructions} from '../components/Questions/CardQuestions'
+import React, { useEffect, useState } from "react";
 import Video from "../components/Recorder/Video";
-// import {useSelector, useDispatch} from "react-redux"
-// import {getAllQuestions} from "../redux/questions"
+import {
+  VerbalResponse,
+  OpinionScale5,
+} from "../components/Questions/CardQuestions";
 import { fetchApi } from "../config/axiosInstance";
 import { Flex } from "@chakra-ui/react";
 
 const Questions = () => {
+  const [questions, setQuestions] = useState([]);
+  const [card, setCard] = useState(1);
+  const [perCard] = useState(1);
+  const max = questions.length / perCard;
 
-  // const dispatch = useDispatch()
-  // const questions = useSelector((state) => state.questions);
-  // console.log(questions)
-
-  // useEffect(()=>{
-  //   dispatch(getAllQuestions())
-  //  },[])
-  const [questions, setQuestions] = useState([])
-
-   useEffect(() => {
+  useEffect(() => {
     const getAllQuestions = async () => {
       const res = await fetchApi({
         method: "get",
@@ -28,27 +24,40 @@ const Questions = () => {
     getAllQuestions();
   }, [questions]);
 
+  return (
+    <>
+      <Flex
+        flexDirection="column"
+        // border="red solid"
+        width="100%"
+        height="90vh"
+      >
+        <Video />
+        {questions
+          ?.slice((card - 1) * perCard, (card - 1) * perCard + perCard)
+          .map((pregunta, i) => {
+            return pregunta?.tipoTarea === "verbalResponse" ? (
+              <VerbalResponse
+                key={i}
+                item={pregunta}
+                flexDirection="column"
+                card={card}
+                setCard={setCard}
+                max={max}
+              />
+            ) : (
+              <OpinionScale5
+                item={pregunta}
+                flexDirection="column"
+                card={card}
+                setCard={setCard}
+                max={max}
+              />
+            );
+          })}
+      </Flex>
+    </>
+  );
+};
 
-
-return(
-  <>
-  
-  <Flex
-  flexDirection="column"
-  // border="red solid"
-  width="100%"
-  >
-    <Video/>
-  {questions?.map((pregunta, i)=>{
-    return pregunta?.tipoTarea === "verbalResponse" ? (
-      <VerbalResponse key={i} item={pregunta} flexDirection="column"/>
-    ) : (
-      <OpinionScale5 item={pregunta} flexDirection="column"/>
-    )
-  })}  
-  {/* <CardInstructions/> */}
-  </Flex> 
-  </> 
-)}
-
-export default Questions
+export default Questions;
