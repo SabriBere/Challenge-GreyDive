@@ -1,6 +1,6 @@
 import React from "react";
 import { useReactMediaRecorder } from "react-media-recorder";
-import { Button, Flex, CircularProgress } from "@chakra-ui/react";
+import { Button, Flex } from "@chakra-ui/react";
 import { fetchApi } from "../../config/axiosInstance";
 
 const Video = () => {
@@ -16,19 +16,20 @@ const Video = () => {
     });
 
   // const url = mediaBlobUrl.mediaBlobUrl;
-
   //pasar al axios.
   // alert(`Se genero correctamente la url: ${url}`)
-  // 
+  //
 
   return (
     <Flex margin="auto" pb="20px" width="25%" pt="20px">
-      <Button
-        colorScheme="none"
-        _selected={{ bg: "cards" }}
-        mr="20px"
-      >
-        {status === "idle" ? "Not Recording" : status === "recording" ? "Recording" : status === "stopped" ? "Stopped" : ""}
+      <Button colorScheme="none" _selected={{ bg: "cards" }} mr="20px">
+        {status === "idle"
+          ? "Not Recording"
+          : status === "recording"
+          ? "Recording"
+          : status === "stopped"
+          ? "Stopped"
+          : ""}
       </Button>
       <br />
       <Button
