@@ -6,14 +6,14 @@ const Navbar = () => {
     <Flex
     w="100%"
     h="80px"
-    bg="navbar"
+    // bg="navbar"
+    bgGradient='linear(to-l, #7928CA, #FF0080)'
     alignItems="center"
     justifyContent="center"
     >
       <Text as="h1" color="texto" fontWeight="bold" fontSize="30px">
       simulacr.
       </Text>
-      
     </Flex>
   )
 }
