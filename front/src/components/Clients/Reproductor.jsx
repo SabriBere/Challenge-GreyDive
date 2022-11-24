@@ -2,15 +2,14 @@ import React from 'react'
 import ReactPlayer from 'react-player'
 import { Flex } from '@chakra-ui/react'
 
-const Reproductor = () => {
+const Reproductor = (questions) => {
   return (
     <Flex
     alignContent="center"
     justifyContent="center"
-    // border="red solid"
     >
                 <ReactPlayer
-                    url='https://dbw7vamj238cm.cloudfront.net/Viamo_challenge.mp4'
+                    url={questions.questions.linkVideo}
                     controls
                     width="65%"
                     height="30%"

@@ -12,11 +12,6 @@ const App = () => {
       w="100%"
       flexDirection="column"
       bg="fondo"
-      // bgGradient={[
-      //   'linear(to-l, #7928CA, #FF0080)',
-      //   'linear(to-t, blue.200, teal.500)',
-      //   'linear(to-b, orange.100, purple.300)',
-      // ]}
       justifyContent="center"
       alignContent="center"
     >

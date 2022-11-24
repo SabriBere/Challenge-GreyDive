@@ -1,10 +1,12 @@
 const express = require("express");
 const router = express.Router();
 const recordersRoute = require("./recorders")
-const questionsRoute = require("./questions")
+const clientesRoute = require("./clientes")
 
-router.use("/recorder", recordersRoute)
-router.use("/questions", questionsRoute)
+// router.use("/recorder", recordersRoute)
+router.use("/clientes", clientesRoute)
+
+
 
 
 
