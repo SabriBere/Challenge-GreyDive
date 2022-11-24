@@ -1,23 +1,25 @@
-import React from "react";
+import React, {useState} from "react";
 import {
   Flex,
   Text,
   Table,
   Thead,
   Tbody,
-  Tfoot,
   Tr,
   Th,
   Td,
-  TableCaption,
   TableContainer,
 } from "@chakra-ui/react";
+import TablePagination from "./TablePagination";
 
-const Tareas = () => {
+const Tareas = ({questions}) => {
+  const [page, setPage] = useState (1);
+  const [perPage, setPerPage] = useState (10);
+ 
   return (
     <Flex
       color="texto"
-      width="80%"
+      width="82%"
       margin="auto"
       flexDirection="column"
       pt="5%"
@@ -26,16 +28,10 @@ const Tareas = () => {
       <Text fontSize="25px" fontWeight="bold" mb="30px" color="magenta2">
         Tareas
       </Text>
-      <Flex
-        borderRadius="0.5rem"
-        width="100%"
-        textAlign="justify"
-      >
+      <Flex borderRadius="0.5rem" width="100%" textAlign="justify">
         <Text>
-        <strong>Escenario:</strong> Necesitás comprar zapatillas, entonces decidís visitar el
-        sitio web de Viamo.
+          <strong>Escenario:</strong> {questions.escenario}
         </Text>
-     
       </Flex>
       <br />
       <TableContainer>
@@ -43,26 +39,36 @@ const Tareas = () => {
           <Thead>
             <Tr>
               <Th color="teal.300">N° Tarea</Th>
-              <Th textAlign="center" color="teal.300">Descripción</Th>
-              <Th width="20%" textAlign="center" color="teal.300">Duración</Th>
+              {/* <Th textAlign="center" color="teal.300">
+                Descripción
+              </Th> */}
+              <Th textAlign="center" color="teal.300">
+                Duración
+              </Th>
               <Th color="teal.300">Puntuación (1 al 5) </Th>
             </Tr>
           </Thead>
           <Tbody>
-            <Tr>
-              <Td><strong>Tarea 1</strong></Td>
-              <Td textAlign="justify" margin="auto">
-                De todo lo que viste hasta ahora: Del 1 al 5 cuánto te motiva a
-                comprar? <br />
-                De todo lo que viste hasta ahora: Del 1 al 5 cuánto te motiva a
-                comprar?
-              </Td>
-              <Td textAlign="center" color="orange.200"><strong> 0:0:44 </strong></Td>
-              <Td textAlign="center"><strong>3</strong> </Td>
-            </Tr>
+            {questions.preguntas?.slice((page - 1) * perPage, (page - 1) * perPage + perPage).map((task, i) => (
+              <Tr key={i}>
+                <Td>
+                  <strong>Tarea {i +1}</strong> 
+                  {/* Pensar una formula para que se vea correctamente */}
+                  <br />
+                  <div dangerouslySetInnerHTML={{ __html: task.texto }} />
+                </Td>
+                <Td textAlign="center" color="orange.200">
+                  <strong> {task.tiempo} </strong>
+                </Td>
+                <Td textAlign="center">
+                  <strong>{task.respuesta !== "respuesta verbal" ? task.respuesta : "Respuesta verbal"} </strong> 
+                </Td> 
+              </Tr>
+            ))}
           </Tbody>
         </Table>
       </TableContainer>
+      <TablePagination page={page} setPage={setPage}/>
     </Flex>
   );
 };

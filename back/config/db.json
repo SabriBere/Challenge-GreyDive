@@ -19,14 +19,14 @@
             },
             {
                 "tiempo": "0:0:44",
-                "texto": "De todo lo que viste hasta ahora:\\nDel 1 al 5 cuánto te motiva a comprar?",
+                "texto": "De todo lo que viste hasta ahora: Del 1 al 5 ¿Cuánto te motiva a comprar?",
                 "tipoTarea": "opinionScale5",
                 "respuesta": "3"
             },
             {
                 "tipoTarea": "opinionScale5",
                 "respuesta": "3",
-                "texto": "Del 1 al 5 cuánto te motiva a recorrer el sitio y ver más productos?",
+                "texto": "Del 1 al 5 ¿Cuánto te motiva a recorrer el sitio y ver más productos?",
                 "tiempo": "0:0:23"
             },
             {
@@ -45,7 +45,7 @@
                 "respuesta": "respuesta verbal",
                 "tipoTarea": "verbalResponse",
                 "tiempo": "0:0:58",
-                "texto": "Compararías con otras marcas al realizar una compra de este tipo de productos?\\nEn caso de que si, contra qué marcas compararías?"
+                "texto": "Compararías con otras marcas al realizar una compra de este tipo de productos?<br> En caso de que si, contra qué marcas compararías?"
             },
             {
                 "tipoTarea": "verbalResponse",
@@ -62,23 +62,23 @@
             {
                 "tipoTarea": "verbalResponse",
                 "tiempo": "0:0:15",
-                "texto": "Hay algo en estas fotos que te motive a comprar este producto?",
+                "texto": "¿Hay algo en estas fotos que te motive a comprar este producto?",
                 "respuesta": "respuesta verbal"
             },
             {
                 "respuesta": "respuesta verbal",
                 "tipoTarea": "verbalResponse",
-                "texto": "Hay alguna foto que esté faltando para que puedas estar segura de que querés comprar este producto?",
+                "texto": "¿Hay alguna foto que esté faltando para que puedas estar segura de que querés comprar este producto?",
                 "tiempo": "0:0:27"
             },
             {
-                "texto": "Hay algo en estas fotos que te genere dudas, incertidumbre o desconfianza?",
+                "texto": "¿Hay algo en estas fotos que te genere dudas, incertidumbre o desconfianza?",
                 "respuesta": "respuesta verbal",
                 "tiempo": "0:0:9",
                 "tipoTarea": "verbalResponse"
             },
             {
-                "texto": "Qué cambiarías en estas fotos?",
+                "texto": "¿Qué cambiarías en estas fotos?",
                 "tiempo": "0:0:19",
                 "respuesta": "respuesta verbal",
                 "tipoTarea": "verbalResponse"
@@ -86,11 +86,11 @@
             {
                 "tipoTarea": "opinionScale5",
                 "tiempo": "0:0:58",
-                "texto": "Con respecto a la descripción del producto, después de que leíste todo:\\nDel 1 al 5, qué tanto te motiva la descripción a comprar este producto?",
+                "texto": "Con respecto a la descripción del producto, después de que leíste todo:<br> Del 1 al 5, ¿qué tanto te motiva la descripción a comprar este producto?",
                 "respuesta": "3"
             },
             {
-                "texto": "Hay algo que no te haya quedado claro?",
+                "texto": "¿Hay algo que no te haya quedado claro?",
                 "tipoTarea": "verbalResponse",
                 "respuesta": "respuesta verbal",
                 "tiempo": "0:0:23"
@@ -98,30 +98,30 @@
             {
                 "respuesta": "respuesta verbal",
                 "tipoTarea": "verbalResponse",
-                "texto": "Cuál es tu principal duda sobre este producto?",
+                "texto": "¿Cuál es tu principal duda sobre este producto?",
                 "tiempo": "0:0:14"
             },
             {
-                "texto": "Que faltaría en la descripción para que decidas comprar este producto?",
+                "texto": "¿Qué faltaría en la descripción para que decidas comprar este producto?",
                 "respuesta": "respuesta verbal",
                 "tipoTarea": "verbalResponse",
                 "tiempo": "0:0:56"
             },
             {
-                "texto": "Qué le cambiarías a la descripción?",
+                "texto": "¿Qué le cambiarías a la descripción?",
                 "tipoTarea": "verbalResponse",
                 "tiempo": "0:0:19",
                 "respuesta": "respuesta verbal"
             },
             {
-                "texto": "Sobre toda esta página que estamos viendo:\\nSi tuvieses una varita mágica, qué cambiarías de esta página?",
+                "texto": "Sobre toda esta página que estamos viendo:<br> Si tuvieses una varita mágica, ¿qué cambiarías de esta página?",
                 "respuesta": "respuesta verbal",
                 "tipoTarea": "verbalResponse",
                 "tiempo": "0:1:6"
             },
             {
                 "tipoTarea": "verbalResponse",
-                "texto": "Estás pensando en comprar también zapatos.\\nBuscá tres que te gusten y comparalos.",
+                "texto": "Estás pensando en comprar también zapatos.<br> Buscá tres que te gusten y comparalos.",
                 "respuesta": "respuesta verbal",
                 "tiempo": "0:2:5"
             },
@@ -147,17 +147,17 @@
                 "tiempo": "0:1:57",
                 "respuesta": "respuesta verbal",
                 "tipoTarea": "verbalResponse",
-                "texto": "Antes de seguir con la compra te gustaría saber cuáles son los medios de pago disponibles.\\nBuscá esa información."
+                "texto": "Antes de seguir con la compra te gustaría saber cuáles son los medios de pago disponibles.<br>Buscá esa información."
             },
             {
                 "tipoTarea": "verbalResponse",
-                "texto": "Te gustaría saber cuánto va a tardar el envío en llegar a tu domicilio.\\nDónde podés encontrar esa información?",
+                "texto": "Te gustaría saber cuánto va a tardar el envío en llegar a tu domicilio.<br> ¿Dónde podés encontrar esa información?",
                 "respuesta": "respuesta verbal",
                 "tiempo": "0:0:25"
             },
             {
                 "tiempo": "0:0:45",
-                "texto": "Estás evaluando retirar la compra por algún local cercano.\\nAveriguá si se puede y qué locales hay disponibles.",
+                "texto": "Estás evaluando retirar la compra por algún local cercano.<br> Averiguá si se puede y qué locales hay disponibles.",
                 "tipoTarea": "verbalResponse",
                 "respuesta": "respuesta verbal"
             },
@@ -165,7 +165,7 @@
                 "respuesta": "respuesta verbal",
                 "tiempo": "0:0:22",
                 "tipoTarea": "verbalResponse",
-                "texto": "Creés que a este sitio web le vendría bien comenzar a ofrecer gift cards?\\nPor qué?"
+                "texto": "Creés que a este sitio web le vendría bien comenzar a ofrecer gift cards?<br> ¿Por qué?"
             },
             {
                 "tiempo": "0:0:8",
@@ -174,13 +174,13 @@
                 "respuesta": "respuesta verbal"
             },
             {
-                "texto": "Seleccioná la opción de envío a domicilio y llená los datos.\\nLlegá hasta donde puedas, sin llenar los datos de tarjeta de crédito.",
+                "texto": "Seleccioná la opción de envío a domicilio y llená los datos.<br> Llegá hasta donde puedas, sin llenar los datos de tarjeta de crédito.",
                 "respuesta": "respuesta verbal",
                 "tiempo": "0:0:20",
                 "tipoTarea": "verbalResponse"
             },
             {
-                "texto": "Cómo te resultó la experiencia comprando en este sitio web?",
+                "texto": "¿Cómo te resultó la experiencia comprando en este sitio web?",
                 "respuesta": "respuesta verbal",
                 "tipoTarea": "verbalResponse",
                 "tiempo": "0:0:28"
@@ -189,17 +189,17 @@
                 "respuesta": "respuesta verbal",
                 "tiempo": "0:0:18",
                 "tipoTarea": "verbalResponse",
-                "texto": "Cuál fue la mejor parte?"
+                "texto": "¿Cuál fue la mejor parte?"
             },
             {
                 "tiempo": "0:0:45",
-                "texto": "Cuál fue la peor parte?",
+                "texto": "¿Cuál fue la peor parte?",
                 "respuesta": "respuesta verbal",
                 "tipoTarea": "verbalResponse"
             },
             {
                 "tiempo": "0:0:8",
-                "texto": "Hay algo que te haya generado dudas, desconfianza o incertidumbre?",
+                "texto": "¿Hay algo que te haya generado dudas, desconfianza o incertidumbre?",
                 "respuesta": "respuesta verbal",
                 "tipoTarea": "verbalResponse"
             },
@@ -207,28 +207,28 @@
                 "tipoTarea": "verbalResponse",
                 "respuesta": "respuesta verbal",
                 "tiempo": "0:0:8",
-                "texto": "Comprarías estos productos de esta marca, o preferirías comprar los de otra marca?"
+                "texto": "¿Comprarías estos productos de esta marca, o preferirías comprar los de otra marca?"
             },
             {
                 "tiempo": "0:0:18",
                 "respuesta": "respuesta verbal",
-                "texto": "Hubo algo de lo que viste que te haría comprar en esta marca en vez de a otra?",
+                "texto": "¿Hubo algo de lo que viste que te haría comprar en esta marca en vez de a otra?",
                 "tipoTarea": "verbalResponse"
             },
             {
-                "texto": "Si esta marca no existiera, dónde comprarías estos productos?",
+                "texto": "Si esta marca no existiera, ¿dónde comprarías estos productos?",
                 "respuesta": "respuesta verbal",
                 "tiempo": "0:0:10",
                 "tipoTarea": "verbalResponse"
             },
             {
                 "tipoTarea": "opinionScale5",
-                "texto": "Del 1 al 5, cuánta confianza te inspira este sitio web?",
+                "texto": "Del 1 al 5, ¿cuánta confianza te inspira este sitio web?",
                 "tiempo": "0:0:5",
                 "respuesta": "4"
             },
             {
-                "texto": "Del 1 al 5, cuán probable es que hagas una compra en este sitio?",
+                "texto": "Del 1 al 5, ¿cuán probable es que hagas una compra en este sitio?",
                 "tiempo": "0:0:8",
                 "respuesta": "4",
                 "tipoTarea": "opinionScale5"
@@ -236,13 +236,13 @@
             {
                 "tiempo": "0:0:14",
                 "tipoTarea": "verbalResponse",
-                "texto": "Y si no la hicieras acá, donde la harías?",
+                "texto": "Y si no la hicieras acá, ¿dónde la harías?",
                 "respuesta": "respuesta verbal"
             },
             {
                 "tiempo": "0:0:47",
                 "tipoTarea": "verbalResponse",
-                "texto": "Si tuvieses una varita mágica, qué cambiarías de todo el sitio web?",
+                "texto": "Si tuvieses una varita mágica, ¿qué cambiarías de todo el sitio web?",
                 "respuesta": "respuesta verbal"
             }
         ],
@@ -280,12 +280,12 @@
             },
             {
                 "respuesta": "4",
-                "texto": "De todo lo que viste hasta ahora:\\nDel 1 al 5 cuánto te motiva a comprar?",
+                "texto": "De todo lo que viste hasta ahora:<br>Del 1 al 5 ¿cuánto te motiva a comprar?",
                 "tiempo": "0:0:10",
                 "tipoTarea": "opinionScale5"
             },
             {
-                "texto": "Del 1 al 5 cuánto te motiva a recorrer el sitio y ver más productos?",
+                "texto": "Del 1 al 5 ¿cuánto te motiva a recorrer el sitio y ver más productos?",
                 "respuesta": "5",
                 "tiempo": "0:0:8",
                 "tipoTarea": "opinionScale5"
@@ -303,25 +303,25 @@
                 "tipoTarea": "verbalResponse"
             },
             {
-                "texto": "Compararías con otras marcas al realizar una compra de este tipo de productos?\\nEn caso de que si, contra qué marcas compararías?",
+                "texto": "Compararías con otras marcas al realizar una compra de este tipo de productos?<br> En caso de que si, contra qué marcas compararías?",
                 "respuesta": "respuesta verbal",
                 "tiempo": "0:1:2",
                 "tipoTarea": "verbalResponse"
             },
             {
                 "tipoTarea": "verbalResponse",
-                "texto": "Cuánto tiempo le dedicarías a comparar este tipo de producto contra el de otras marcas?",
+                "texto": "¿Cuánto tiempo le dedicarías a comparar este tipo de producto contra el de otras marcas?",
                 "tiempo": "0:0:26",
                 "respuesta": "respuesta verbal"
             },
             {
                 "respuesta": "3",
                 "tipoTarea": "opinionScale5",
-                "texto": "Del 1 al 5, qué tanto te motivan las fotos a comprar este producto?",
+                "texto": "Del 1 al 5, ¿qué tanto te motivan las fotos a comprar este producto?",
                 "tiempo": "0:0:20"
             },
             {
-                "texto": "Hay algo en estas fotos que te motive a comprar este producto?",
+                "texto": "¿Hay algo en estas fotos que te motive a comprar este producto?",
                 "tipoTarea": "verbalResponse",
                 "tiempo": "0:0:8",
                 "respuesta": "respuesta verbal"
@@ -329,35 +329,35 @@
             {
                 "tipoTarea": "verbalResponse",
                 "tiempo": "0:0:21",
-                "texto": "Hay alguna foto que esté faltando para que puedas estar segura de que querés comprar este producto?",
+                "texto": "¿Hay alguna foto que esté faltando para que puedas estar segura de que querés comprar este producto?",
                 "respuesta": "respuesta verbal"
             },
             {
                 "tipoTarea": "verbalResponse",
                 "tiempo": "0:0:11",
-                "texto": "Hay algo en estas fotos que te genere dudas, incertidumbre o desconfianza?",
+                "texto": "¿Hay algo en estas fotos que te genere dudas, incertidumbre o desconfianza?",
                 "respuesta": "respuesta verbal"
             },
             {
                 "respuesta": "respuesta verbal",
                 "tiempo": "0:0:17",
-                "texto": "Qué cambiarías en estas fotos?",
+                "texto": "¿Qué cambiarías en estas fotos?",
                 "tipoTarea": "verbalResponse"
             },
             {
                 "respuesta": "4",
                 "tiempo": "0:1:44",
                 "tipoTarea": "opinionScale5",
-                "texto": "Con respecto a la descripción del producto, después de que leíste todo:\\nDel 1 al 5, qué tanto te motiva la descripción a comprar este producto?"
+                "texto": "Con respecto a la descripción del producto, después de que leíste todo:<br> Del 1 al 5, ¿qué tanto te motiva la descripción a comprar este producto?"
             },
             {
                 "respuesta": "respuesta verbal",
                 "tipoTarea": "verbalResponse",
                 "tiempo": "0:0:23",
-                "texto": "Hay algo que no te haya quedado claro?"
+                "texto": "¿Hay algo que no te haya quedado claro?"
             },
             {
-                "texto": "Cuál es tu principal duda sobre este producto?",
+                "texto": "¿Cuál es tu principal duda sobre este producto?",
                 "tipoTarea": "verbalResponse",
                 "respuesta": "respuesta verbal",
                 "tiempo": "0:0:16"
@@ -366,22 +366,22 @@
                 "tiempo": "0:0:29",
                 "respuesta": "respuesta verbal",
                 "tipoTarea": "verbalResponse",
-                "texto": "Que faltaría en la descripción para que decidas comprar este producto?"
+                "texto": "¿Qué faltaría en la descripción para que decidas comprar este producto?"
             },
             {
                 "respuesta": "respuesta verbal",
                 "tiempo": "0:0:9",
-                "texto": "Qué le cambiarías a la descripción?",
+                "texto": "¿Qué le cambiarías a la descripción?",
                 "tipoTarea": "verbalResponse"
             },
             {
                 "tiempo": "0:0:24",
                 "respuesta": "respuesta verbal",
-                "texto": "Sobre toda esta página que estamos viendo:\\nSi tuvieses una varita mágica, qué cambiarías de esta página?",
+                "texto": "Sobre toda esta página que estamos viendo:<br> Si tuvieses una varita mágica, ¿qué cambiarías de esta página?",
                 "tipoTarea": "verbalResponse"
             },
             {
-                "texto": "Estás pensando en comprarte también un escritorio.\\nBuscá tres que te gusten y comparalos.",
+                "texto": "Estás pensando en comprarte también un escritorio.<br> Buscá tres que te gusten y comparalos.",
                 "tiempo": "0:3:39",
                 "respuesta": "respuesta verbal",
                 "tipoTarea": "verbalResponse"
@@ -405,25 +405,25 @@
                 "respuesta": "respuesta verbal"
             },
             {
-                "texto": "Antes de seguir con la compra te gustaría saber cuáles son los medios de pago disponibles.\\nBuscá esa información.",
+                "texto": "Antes de seguir con la compra te gustaría saber cuáles son los medios de pago disponibles.<br> Buscá esa información.",
                 "tiempo": "0:0:33",
                 "tipoTarea": "verbalResponse",
                 "respuesta": "respuesta verbal"
             },
             {
-                "texto": "Te gustaría saber cuánto va a tardar el envío en llegar a tu domicilio.\\nDónde podés encontrar esa información?",
+                "texto": "Te gustaría saber cuánto va a tardar el envío en llegar a tu domicilio.<br> ¿Dónde podés encontrar esa información?",
                 "tipoTarea": "verbalResponse",
                 "tiempo": "0:0:30",
                 "respuesta": "respuesta verbal"
             },
             {
-                "texto": "Estás evaluando retirar la compra por algún local cercano.\\nAveriguá si se puede y qué locales hay disponibles.",
+                "texto": "Estás evaluando retirar la compra por algún local cercano.<br> ¿Averiguá si se puede y qué locales hay disponibles.",
                 "tiempo": "0:1:18",
                 "tipoTarea": "verbalResponse",
                 "respuesta": "respuesta verbal"
             },
             {
-                "texto": "Creés que a este sitio web le vendría bien comenzar a ofrecer gift cards?\\nPor qué?",
+                "texto": "Creés que a este sitio web le vendría bien comenzar a ofrecer gift cards?<br> ¿Por qué?",
                 "respuesta": "respuesta verbal",
                 "tiempo": "0:0:21",
                 "tipoTarea": "verbalResponse"
@@ -437,72 +437,72 @@
             {
                 "respuesta": "respuesta verbal",
                 "tiempo": "0:0:22",
-                "texto": "Seleccioná la opción de envío a domicilio y llená los datos.\\nLlegá hasta donde puedas, sin llenar los datos de tarjeta de crédito.",
+                "texto": "Seleccioná la opción de envío a domicilio y llená los datos.<br> Llegá hasta donde puedas, sin llenar los datos de tarjeta de crédito.",
                 "tipoTarea": "verbalResponse"
             },
             {
                 "tipoTarea": "verbalResponse",
                 "tiempo": "0:0:27",
-                "texto": "Cómo te resultó la experiencia comprando en este sitio web?",
+                "texto": "¿Cómo te resultó la experiencia comprando en este sitio web?",
                 "respuesta": "respuesta verbal"
             },
             {
                 "tiempo": "0:0:7",
                 "respuesta": "respuesta verbal",
                 "tipoTarea": "verbalResponse",
-                "texto": "Cuál fue la mejor parte?"
+                "texto": "¿Cuál fue la mejor parte?"
             },
             {
                 "tipoTarea": "verbalResponse",
-                "texto": "Cuál fue la peor parte?",
+                "texto": "¿Cuál fue la peor parte?",
                 "tiempo": "0:0:18",
                 "respuesta": "respuesta verbal"
             },
             {
                 "respuesta": "respuesta verbal",
-                "texto": "Hay algo que te haya generado dudas, desconfianza o incertidumbre?",
+                "texto": "¿Hay algo que te haya generado dudas, desconfianza o incertidumbre?",
                 "tipoTarea": "verbalResponse",
                 "tiempo": "0:0:31"
             },
             {
                 "respuesta": "respuesta verbal",
-                "texto": "Comprarías estos productos de esta marca, o preferirías comprar los de otra marca?",
+                "texto": "¿Comprarías estos productos de esta marca, o preferirías comprar los de otra marca?",
                 "tipoTarea": "verbalResponse",
                 "tiempo": "0:0:11"
             },
             {
-                "texto": "Hubo algo de lo que viste que te haría comprar en esta marca en vez de a otra?",
+                "texto": "¿Hubo algo de lo que viste que te haría comprar en esta marca en vez de a otra?",
                 "tipoTarea": "verbalResponse",
                 "respuesta": "respuesta verbal",
                 "tiempo": "0:0:19"
             },
             {
                 "tiempo": "0:0:21",
-                "texto": "Si esta marca no existiera, dónde comprarías estos productos?",
+                "texto": "Si esta marca no existiera, ¿dónde comprarías estos productos?",
                 "respuesta": "respuesta verbal",
                 "tipoTarea": "verbalResponse"
             },
             {
-                "texto": "Del 1 al 5, cuánta confianza te inspira este sitio web?",
+                "texto": "Del 1 al 5, ¿cuánta confianza te inspira este sitio web?",
                 "tipoTarea": "opinionScale5",
                 "respuesta": "3",
                 "tiempo": "0:0:8"
             },
             {
-                "texto": "Del 1 al 5, cuán probable es que hagas una compra en este sitio?",
+                "texto": "Del 1 al 5, ¿cuán probable es que hagas una compra en este sitio?",
                 "respuesta": "3",
                 "tiempo": "0:0:6",
                 "tipoTarea": "opinionScale5"
             },
             {
-                "texto": "Y si no la hicieras acá, donde la harías?",
+                "texto": "Y si no la hicieras acá, ¿dónde la harías?",
                 "tipoTarea": "verbalResponse",
                 "respuesta": "respuesta verbal",
                 "tiempo": "0:0:6"
             },
             {
                 "tiempo": "0:0:41",
-                "texto": "Si tuvieses una varita mágica, qué cambiarías de todo el sitio web?",
+                "texto": "Si tuvieses una varita mágica, ¿qué cambiarías de todo el sitio web?",
                 "tipoTarea": "verbalResponse",
                 "respuesta": "respuesta verbal"
             }
