@@ -1,6 +1,7 @@
 import React from "react";
 import { Flex, Text } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -16,7 +17,9 @@ const Navbar = () => {
       justifyContent="center"
     >
       <Text as="h1" color="texto" fontWeight="bold" fontSize="30px">
+        <Link to={"/"}>
         simulacr.
+        </Link>
       </Text>
     </Flex>
   );
