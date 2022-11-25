@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import { Flex, Text, Button } from "@chakra-ui/react";
 
-const Transcripciones = ({ questions, hide = false }) => {
+const Transcripciones = ({ questions}) => {
   const texto = Object.values(questions).slice(2, 3).toString();
   const textoCortado = texto.split(" ").slice(0, 200).join(" ") + "...";
 

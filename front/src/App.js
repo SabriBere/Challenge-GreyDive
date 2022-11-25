@@ -19,8 +19,8 @@ const App = () => {
       <Flex justifyContent="center" alignItems="center">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/test/:id" element={<Test />} />
           <Route path="/questions" element={<Questions />} />
-          <Route path="/test" element={<Test />} />
         </Routes>
       </Flex>
     </Flex>
