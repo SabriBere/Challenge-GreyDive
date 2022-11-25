@@ -1,7 +1,7 @@
 import React from "react";
 import { Flex } from "@chakra-ui/react";
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar";
+import Navbar from "./components/Home/Navbar";
 import Home from "./pages/Home";
 import Questions from "./pages/Questions";
 import Test from "./pages/Test";
