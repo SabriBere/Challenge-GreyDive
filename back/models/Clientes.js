@@ -3,28 +3,28 @@ const db = require("../config/db");
 
 class Cliente extends Model {}
 
-Cliente.init({
+Cliente.init(
+  {
     cliente: {
-        type: DataTypes.STRING
+      type: DataTypes.STRING,
     },
     transcripcion: {
-        type: DataTypes.TEXT
+      type: DataTypes.TEXT,
     },
-    escenario:{
-        type:DataTypes.STRING
+    escenario: {
+      type: DataTypes.STRING,
     },
-    linkVideo:{
-        type: DataTypes.STRING
+    linkVideo: {
+      type: DataTypes.STRING,
     },
-    preguntas:{
-        type:DataTypes.JSON(DataTypes.ARRAY)
-    }
-},
-    {
-        sequelize: db,
-        modelName: "clientes",
-    });
+    preguntas: {
+      type: DataTypes.JSON(DataTypes.ARRAY),
+    },
+  },
+  {
+    sequelize: db,
+    modelName: "clientes",
+  }
+);
 
-
-
-module.exports = Cliente
+module.exports = Cliente;

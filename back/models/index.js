@@ -1,5 +1,3 @@
-const Cliente = require("./Clientes")
+const Cliente = require("./Clientes");
 
-
-module.exports = { Cliente}
-
+module.exports = { Cliente };
