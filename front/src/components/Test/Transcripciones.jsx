@@ -1,9 +1,15 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { Flex, Text, Button } from "@chakra-ui/react";
 
-const Transcripciones = ({ questions}) => {
+const Transcripciones = ({ questions }) => {
   const texto = Object.values(questions).slice(2, 3).toString();
   const textoCortado = texto.split(" ").slice(0, 200).join(" ") + "...";
+  const [visible, setVisible] = useState(true);
+  const resultText = visible ? textoCortado : texto;
+
+  const toggle = () => {
+    setVisible(!visible);
+  };
 
   return (
     <Flex
@@ -17,8 +23,8 @@ const Transcripciones = ({ questions}) => {
       <Text fontSize="25px" fontWeight="bold" mb="25px" color="magenta3">
         Transcripción
       </Text>
-      <Flex borderRadius="0.5rem" width="100%" textAlign="justify" className="hide" id="hideText">
-        <div dangerouslySetInnerHTML={{ __html: textoCortado }} />
+      <Flex borderRadius="0.5rem" width="100%" textAlign="justify">
+        <div dangerouslySetInnerHTML={{ __html: resultText }} />
       </Flex>
       <br />
       <Button
@@ -26,9 +32,11 @@ const Transcripciones = ({ questions}) => {
         _hover={{ bg: "none" }}
         boxShadow="dark-lg"
         id="hideText_btn"
+        onClick={toggle}
       >
-        Leer más
+        {visible ? "Leer más" : "Leer menos"}
       </Button>
+      <br />
     </Flex>
   );
 };
