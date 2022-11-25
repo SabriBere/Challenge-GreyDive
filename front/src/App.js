@@ -20,7 +20,6 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/test/:id" element={<Test />} />
-          <Route path="/questions" element={<Questions />} />
         </Routes>
       </Flex>
     </Flex>
