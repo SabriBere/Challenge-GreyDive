@@ -26,12 +26,7 @@ const Questions = () => {
 
   return (
     <>
-      <Flex
-        flexDirection="column"
-        // border="red solid"
-        width="100%"
-        height="90vh"
-      >
+      <Flex flexDirection="column" width="100%" height="90vh">
         <Video />
         {questions
           ?.slice((card - 1) * perCard, (card - 1) * perCard + perCard)

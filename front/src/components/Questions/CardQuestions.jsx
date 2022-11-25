@@ -56,7 +56,6 @@ export const OpinionScale5 = ({ item, card, setCard, max }) => {
       bg="cards"
       borderRadius="0.5rem"
       boxShadow="0px 5px 10px 0px #000"
-      // border="red solid"
     >
       <Flex
         alignContent="center"
@@ -65,7 +64,6 @@ export const OpinionScale5 = ({ item, card, setCard, max }) => {
         color="texto"
         fontSize="25px"
         fontWeight="bold"
-        // border="red solid"
       >
         <Text>Tarea {item.id} de 40</Text>
       </Flex>
