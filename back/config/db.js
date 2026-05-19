@@ -1,10 +1,16 @@
 const Sequelize = require("sequelize");
+require("dotenv").config({ quiet: true });
 
-// Borrar contraseña de postgress y cambiar por "null si estás en Linux"
-const db = new Sequelize("greydive", "postgres", "1234", {
-  host: "localhost",
-  dialect: "postgres",
-  logging: false,
-});
+const db = new Sequelize(
+  !process.env.DB_NAME || "greydive",
+  !process.env.DB_USER || "postgres",
+  !process.env.DB_PASSWORD || "1234",
+  {
+    host: !process.env.DB_HOST || "localhost",
+    port: !process.env.DB_PORT || 5432,
+    dialect: !process.env.DB_DIALECT || "postgres",
+    logging: false,
+  }
+);
 
 module.exports = db;

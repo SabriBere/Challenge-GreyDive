@@ -4,5 +4,7 @@ node_modules/
 # npm internals
 .package-lock.json
 
-# local database config
-config/db/db.js
+# environment
+.env
+.env.local
+.env.*.local
