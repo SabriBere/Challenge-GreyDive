@@ -1,6 +1,8 @@
-# ignora nod modul
-**node_modules
+# dependencies
+node_modules/
+
+# npm internals
 .package-lock.json
-.package-lock.json
-#ignora db
-.config/db/db.js
+
+# local database config
+config/db/db.js
