@@ -1,7 +1,7 @@
 import React from "react";
 import { Flex, Text, Button } from "@chakra-ui/react";
-import { ButtonOptions, ButtonStart } from "./Buttons";
-import Pagination from "./Pagination";
+import { ButtonOptions, ButtonStart } from "../buttons/Buttons";
+import Pagination from "../pagination/Pagination";
 import { useReactMediaRecorder } from "react-media-recorder";
 import { Link } from "react-router-dom";
 
