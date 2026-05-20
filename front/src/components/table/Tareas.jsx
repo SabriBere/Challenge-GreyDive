@@ -10,7 +10,7 @@ import {
   Td,
   TableContainer,
 } from "@chakra-ui/react";
-import TablePagination from "./TablePagination";
+import TablePagination from "../pagination/TablePagination";
 
 const Tareas = ({ questions }) => {
   const [page, setPage] = useState(1);

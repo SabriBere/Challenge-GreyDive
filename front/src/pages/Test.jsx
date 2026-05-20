@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { Flex } from "@chakra-ui/react";
-import TituloCliente from "../components/Test/TituloCliente";
-import Reproductor from "../components/Test/Reproductor";
-import Transcripciones from "../components/Test/Transcripciones"
-import Tareas from "../components/Test/Tareas";
 import { fetchApi } from "../config/axiosInstance";
 import { useParams } from "react-router-dom";
+import TituloCliente from "../components/titles/TituloCliente";
+import Reproductor from "../components/reproductor/Reproductor";
+import Transcripciones from "../components/buttons/Transcripciones"
+import Tareas from "../components/table/Tareas";
+
 
 const Test = () => {
   const { id } = useParams();
