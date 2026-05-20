@@ -3,7 +3,6 @@ import { Flex } from "@chakra-ui/react";
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/Home";
-import Questions from "./pages/Questions";
 import Test from "./pages/Test";
 import NotFound from "./components/emptyStates/NotFound";
 
