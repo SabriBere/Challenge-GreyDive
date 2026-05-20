@@ -1,9 +1,10 @@
 import React from "react";
 import { Flex, Text, Button } from "@chakra-ui/react";
 import { ButtonOptions, ButtonStart } from "../buttons/Buttons";
-import Pagination from "../pagination/Pagination";
 import { useReactMediaRecorder } from "react-media-recorder";
 import { Link } from "react-router-dom";
+import Pagination from "../pagination/Pagination";
+
 
 export const VerbalResponse = ({ item, card, setCard, max }) => {
   return (
