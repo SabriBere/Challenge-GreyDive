@@ -6,6 +6,13 @@ body {
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #1c1c23;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
 }
 
 code {
@@ -27,4 +34,3 @@ body::-webkit-scrollbar-thumb{
 body::-webkit-scrollbar-track-piece{
   background-color: #1c1c23;
 }
-
