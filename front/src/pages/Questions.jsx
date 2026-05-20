@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Video from "../components/Recorder/Video";
 import {
   VerbalResponse,
   OpinionScale5,
-} from "../components/Questions/CardQuestions";
+} from "../components/cards/CardQuestions";
 import { fetchApi } from "../config/axiosInstance";
 import { Flex } from "@chakra-ui/react";
 
