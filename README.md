@@ -1,71 +1,101 @@
-# Getting Started with Create React App
+# Challenge GreyDive 🧭
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a recovered legacy challenge repository. The frontend was originally built with Create React App and has been migrated to Vite as part of the recovery work, mainly to remove the deprecated `react-scripts` dependency and clean up security warnings from its transitive dependency tree.
 
-## Available Scripts
+The project is still being modernized incrementally. For now, this README focuses on the frontend.
 
-In the project directory, you can run:
+## Frontend ⚛️
 
-### `npm start`
+The frontend lives in `front/` and is a React application powered by Vite.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Stack 🧱
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React 18
+- Vite
+- Chakra UI
+- React Router
+- Axios
 
-### `npm test`
+### Running Locally 🚀
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+From the repository root:
 
-### `npm run build`
+```bash
+cd front
+npm install
+npm run dev
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The app runs at:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```txt
+http://localhost:3000
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Build 🏗️
 
-### `npm run eject`
+```bash
+cd front
+npm run build
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Preview Production Build 👀
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+cd front
+npm run preview
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Migration Notes 🛠️
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This frontend used to depend on Create React App through `react-scripts`. It was migrated to Vite to make the project easier to maintain and to remove deprecated tooling.
 
-## Learn More
+Relevant changes made during the migration:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Removed `react-scripts`.
+- Added `vite` and `@vitejs/plugin-react`.
+- Moved the app entry HTML to `front/index.html`.
+- Added `front/vite.config.js`.
+- Kept the development server on port `3000`.
+- Added a Vite proxy for backend API calls to `http://localhost:8080`.
+- Replaced the old CRA runtime assumptions with Vite-compatible setup.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Routing 🧭
 
-### Code Splitting
+The frontend currently exposes:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```txt
+/
+/test/:id
+```
 
-### Analyzing the Bundle Size
+Invalid routes render a not found state.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## API Expectations 🔌
 
-### Making a Progressive Web App
+The frontend expects a backend running locally at:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+```txt
+http://localhost:8080
+```
 
-### Advanced Configuration
+During development, Vite proxies frontend requests from `/api` to that backend.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+The main endpoint currently used by the frontend is:
 
-### Deployment
+```txt
+GET /api/clientes
+GET /api/clientes/:id
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Current Status 🌱
 
-### `npm run build` fails to minify
+This repository is being restored in small steps. Some legacy pieces may still exist and are being reviewed before removal or refactor.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Known frontend cleanup already started:
 
+- Vite migration.
+- Folder reorganization.
+- 404 state.
+- Empty states for missing test data.
+- Removal of unused route imports and components.
