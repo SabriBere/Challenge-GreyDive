@@ -1,7 +1,13 @@
 import React, { useState } from "react";
 import { Flex, Button, Text } from "@chakra-ui/react";
 
-const TablePagination = ({ max = 4, page, setPage }) => {
+type TablePaginationProps = {
+  max?: number;
+  page: number;
+  setPage: React.Dispatch<React.SetStateAction<number>>;
+};
+
+const TablePagination = ({ max = 4, page, setPage }: TablePaginationProps) => {
   const nextPage = () => {
     setPage(page + 1);
   };

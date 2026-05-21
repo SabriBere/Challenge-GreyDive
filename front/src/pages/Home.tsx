@@ -1,23 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Flex, Text, Grid, Button, Input } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
-import { fetchApi } from "../config/axiosInstance";
 import { motion } from "framer-motion";
+import { useQuery } from "@tanstack/react-query";
+import EmptyState from "../components/emptyStates/EmptyState";
+import { getTests } from "../services/test";
+import type { Test } from "../types/test";
 
 const Home = () => {
-  const [data, setData] = useState([]);
   const [value, setValue] = useState("");
+  const {
+    data = [],
+    isLoading,
+    isError,
+  } = useQuery({
+    queryKey: ["tests"],
+    queryFn: getTests,
+    retry: false,
+  });
 
-  useEffect(() => {
-    const getAllQuestions = async () => {
-      const res = await fetchApi({
-        method: "get",
-        url: "/api/clientes/",
-      });
-      setData(res.data.data.rows);
-    };
-    getAllQuestions();
-  }, [data]);
+  const filteredTests = data.filter((info: Test) =>
+    info.cliente?.toLowerCase().includes(value.toLowerCase())
+  );
 
   return (
     <Flex
@@ -51,18 +55,32 @@ const Home = () => {
         </Flex>
         <br />
         <br />
-        <Grid
-          templateColumns="repeat(4, 2fr)"
-          gap={6}
-          width="50%"
-          margin="auto"
-        >
-          {data
-            ?.filter((info) => info.cliente?.includes(value))
-            .map((info, i) => {
+        {isLoading ? (
+          <EmptyState
+            title="Cargando tests"
+            description="Estamos buscando los tests disponibles."
+          />
+        ) : isError || !data.length ? (
+          <EmptyState
+            title="No hay tests disponibles"
+            description="No pudimos cargar la lista de tests en este momento."
+          />
+        ) : !filteredTests.length ? (
+          <EmptyState
+            title="Sin resultados"
+            description="No encontramos testers que coincidan con tu búsqueda."
+          />
+        ) : (
+          <Grid
+            templateColumns="repeat(4, 2fr)"
+            gap={6}
+            width="50%"
+            margin="auto"
+          >
+            {filteredTests.map((info) => {
               return (
                 <Flex
-                  key={i}
+                  key={info.id}
                   width="300px"
                   height="250px"
                   bg="cards"
@@ -107,7 +125,8 @@ const Home = () => {
                 </Flex>
               );
             })}
-        </Grid>
+          </Grid>
+        )}
       </Flex>
     </Flex>
   );

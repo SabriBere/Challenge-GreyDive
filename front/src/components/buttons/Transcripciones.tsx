@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import { Flex, Text, Button } from "@chakra-ui/react";
+import type { Test } from "../../types/test";
 
-const Transcripciones = ({ questions }) => {
-  const texto = Object.values(questions).slice(2, 3).toString();
+type TranscripcionesProps = {
+  questions: Test;
+};
+
+const Transcripciones = ({ questions }: TranscripcionesProps) => {
+  const texto = questions.transcripcion;
   const textoCortado = texto.split(" ").slice(0, 200).join(" ") + "...";
   const [visible, setVisible] = useState(true);
   const resultText = visible ? textoCortado : texto;
