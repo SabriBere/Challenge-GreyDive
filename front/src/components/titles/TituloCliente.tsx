@@ -1,8 +1,13 @@
 import React from "react";
 import { Flex, Text } from "@chakra-ui/react";
+import type { Test } from "../../types/test";
 
-const TituloCliente = ({ questions }) => {
-  const nombre = Object?.values(questions).slice(1, 2);
+type TituloClienteProps = {
+  questions: Test;
+};
+
+const TituloCliente = ({ questions }: TituloClienteProps) => {
+  const nombre = questions.cliente;
   const correctInicial =
     nombre.toString().charAt(0).toUpperCase() + nombre.toString().slice(1);
 

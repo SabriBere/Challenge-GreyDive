@@ -17,7 +17,9 @@ const Test = () => {
     isError,
   } = useQuery({
     queryKey: ["test", id],
-    queryFn: () => getTestById(id),
+    queryFn: () => getTestById(id || ""),
+    enabled: Boolean(id),
+    retry: false,
   });
 
   if (isLoading) {

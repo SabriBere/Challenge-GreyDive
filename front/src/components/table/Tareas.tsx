@@ -11,10 +11,15 @@ import {
   TableContainer,
 } from "@chakra-ui/react";
 import TablePagination from "../pagination/TablePagination";
+import type { Test } from "../../types/test";
 
-const Tareas = ({ questions }) => {
+type TareasProps = {
+  questions: Test;
+};
+
+const Tareas = ({ questions }: TareasProps) => {
   const [page, setPage] = useState(1);
-  const [perPage, setPerPage] = useState(10);
+  const [perPage] = useState(10);
 
   return (
     <Flex

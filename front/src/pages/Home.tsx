@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { useQuery } from "@tanstack/react-query";
 import EmptyState from "../components/emptyStates/EmptyState";
 import { getTests } from "../services/test";
+import type { Test } from "../types/test";
 
 const Home = () => {
   const [value, setValue] = useState("");
@@ -18,7 +19,9 @@ const Home = () => {
     retry: false,
   });
 
-  const filteredTests = data.filter((info) => info.cliente?.includes(value));
+  const filteredTests = data.filter((info: Test) =>
+    info.cliente?.toLowerCase().includes(value.toLowerCase())
+  );
 
   return (
     <Flex
@@ -74,10 +77,10 @@ const Home = () => {
             width="50%"
             margin="auto"
           >
-            {filteredTests.map((info, i) => {
+            {filteredTests.map((info) => {
               return (
                 <Flex
-                  key={i}
+                  key={info.id}
                   width="300px"
                   height="250px"
                   bg="cards"

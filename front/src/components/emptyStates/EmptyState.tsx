@@ -2,12 +2,19 @@ import React from "react";
 import { Button, Flex, Heading, Text } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
+type EmptyStateProps = {
+  title?: string;
+  description?: string;
+  actionLabel?: string;
+  actionTo?: string;
+};
+
 const EmptyState = ({
   title = "",
   description = "",
   actionLabel = "",
   actionTo = "/",
-}) => {
+}: EmptyStateProps) => {
   return (
     <Flex
       minH="100%"
