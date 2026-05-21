@@ -5,6 +5,7 @@ node_modules/
 
 # production
 dist
+*.tsbuildinfo
 
 # misc
 .DS_Store
