@@ -1,38 +1,24 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Flex } from "@chakra-ui/react";
-import { fetchApi } from "../config/axiosInstance";
 import { useParams } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
 import TituloCliente from "../components/titles/TituloCliente";
 import Reproductor from "../components/reproductor/Reproductor";
 import Transcripciones from "../components/buttons/Transcripciones";
 import Tareas from "../components/table/Tareas";
 import EmptyState from "../components/emptyStates/EmptyState";
+import { getTestById } from "../services/test";
 
 const Test = () => {
   const { id } = useParams();
-  const [questions, setQuestions] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    const getAllQuestions = async () => {
-      try {
-        setIsLoading(true);
-        setError(null);
-        const res = await fetchApi({
-          method: "get",
-          url: `/api/clientes/${id}`,
-        });
-        setQuestions(res.data.data);
-      } catch (error) {
-        setQuestions(null);
-        setError(error);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-    getAllQuestions();
-  }, [id]);
+  const {
+    data: questions,
+    isLoading,
+    isError,
+  } = useQuery({
+    queryKey: ["test", id],
+    queryFn: () => getTestById(id),
+  });
 
   if (isLoading) {
     return (
@@ -43,7 +29,7 @@ const Test = () => {
     );
   }
 
-  if (error || !questions?.id) {
+  if (isError || !questions?.id) {
     return (
       <EmptyState
         title={`Test no encontrado`}
