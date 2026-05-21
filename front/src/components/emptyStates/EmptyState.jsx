@@ -33,17 +33,19 @@ const EmptyState = ({
         <Text color="texto" fontSize="lg" opacity={0.85}>
           {description}
         </Text>
-        <Button
-          as={Link}
-          to={actionTo}
-          bg="navbar"
-          color="texto"
-          size="lg"
-          _hover={{ bg: "magenta2", transform: "translateY(-2px)" }}
-          _active={{ transform: "translateY(0)" }}
-        >
-          {actionLabel}
-        </Button>
+        {actionLabel && (
+          <Button
+            as={Link}
+            to={actionTo}
+            bg="navbar"
+            color="texto"
+            size="lg"
+            _hover={{ bg: "magenta2", transform: "translateY(-2px)" }}
+            _active={{ transform: "translateY(0)" }}
+          >
+            {actionLabel}
+          </Button>
+        )}
       </Flex>
     </Flex>
   );
