@@ -5,15 +5,15 @@ const theme = extendTheme({
     navbar: "#e42c5a", //magenta
     texto: "#FFFFFF", //blanco
     fondo: "#1c1c23", //fondo
-    cards: "#505050",  //gris de las cards
+    cards: "#505050", //gris de las cards
     violeta: "#333154",
-    violeta1:"#ac5d94",
+    violeta1: "#ac5d94",
     violeta2: "#A45196",
     gradiante: "#672c91", //violeta gradiante
     magenta: "#b60469",
     magenta1: "#ec3f6b",
-    magenta2:"#FF4788",
-    magenta3:"#D4879D"
+    magenta2: "#FF4788",
+    magenta3: "#D4879D",
   },
   breakpoints: {
     sm: "320px",

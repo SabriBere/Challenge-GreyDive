@@ -10,7 +10,7 @@ const TitleTask = () => {
       color="texto"
       fontSize="25px"
       fontWeight="bold"
-    //   border="red solid"
+      //   border="red solid"
     >
       <Text>Tarea 1 de 40</Text>
     </Flex>

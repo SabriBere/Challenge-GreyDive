@@ -71,12 +71,7 @@ const Home = () => {
             description="No encontramos testers que coincidan con tu búsqueda."
           />
         ) : (
-          <Grid
-            templateColumns="repeat(4, 2fr)"
-            gap={6}
-            width="50%"
-            margin="auto"
-          >
+          <Grid templateColumns="repeat(4, 2fr)" gap={6} width="50%" margin="auto">
             {filteredTests.map((info) => {
               return (
                 <Flex
@@ -101,15 +96,8 @@ const Home = () => {
                   >
                     {info.cliente}
                   </Text>
-                  <Text
-                    fontSize="15px"
-                    textAlign="center"
-                    color="texto"
-                    mt="30px"
-                    padding="10px"
-                  >
-                    <strong>Resumen:</strong> <br /> Test de usabilidad en el
-                    sitio web
+                  <Text fontSize="15px" textAlign="center" color="texto" mt="30px" padding="10px">
+                    <strong>Resumen:</strong> <br /> Test de usabilidad en el sitio web
                   </Text>
 
                   <Button
