@@ -21,20 +21,14 @@ const NotFound = () => {
         textAlign="center"
         gap={5}
       >
-        <Text
-          color="magenta2"
-          fontSize="72px"
-          fontWeight="black"
-          lineHeight="1"
-        >
+        <Text color="magenta2" fontSize="72px" fontWeight="black" lineHeight="1">
           404
         </Text>
         <Heading as="h1" size="xl" color="magenta1">
           Página no encontrada
         </Heading>
         <Text color="texto" fontSize="lg" opacity={0.85}>
-          La ruta que estás buscando no existe o fue movida durante la
-          reorganización del proyecto.
+          La ruta que estás buscando no existe o fue movida durante la reorganización del proyecto.
         </Text>
         <Button
           as={Link}

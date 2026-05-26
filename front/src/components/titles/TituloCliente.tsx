@@ -8,8 +8,7 @@ type TituloClienteProps = {
 
 const TituloCliente = ({ questions }: TituloClienteProps) => {
   const nombre = questions.cliente;
-  const correctInicial =
-    nombre.toString().charAt(0).toUpperCase() + nombre.toString().slice(1);
+  const correctInicial = nombre.toString().charAt(0).toUpperCase() + nombre.toString().slice(1);
 
   return (
     <Flex
