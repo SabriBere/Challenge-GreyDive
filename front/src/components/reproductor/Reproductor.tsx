@@ -9,18 +9,15 @@ type ReproductorProps = {
 
 const Reproductor = ({ questions }: ReproductorProps) => {
   return (
-    <Flex
-    alignContent="center"
-    justifyContent="center"
-    >
-                <ReactPlayer
-                    url={questions.linkVideo}
-                    controls
-                    width="65%"
-                    height="30%"
-                    volume={0.5}
-                    playbackRate={1}
-                />
+    <Flex alignContent="center" justifyContent="center">
+      <ReactPlayer
+        url={questions.linkVideo}
+        controls
+        width="65%"
+        height="30%"
+        volume={0.5}
+        playbackRate={1}
+      />
     </Flex>
   );
 };

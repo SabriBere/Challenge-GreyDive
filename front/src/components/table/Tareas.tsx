@@ -1,15 +1,5 @@
 import React, { useState } from "react";
-import {
-  Flex,
-  Text,
-  Table,
-  Thead,
-  Tbody,
-  Tr,
-  Th,
-  Td,
-  TableContainer,
-} from "@chakra-ui/react";
+import { Flex, Text, Table, Thead, Tbody, Tr, Th, Td, TableContainer } from "@chakra-ui/react";
 import TablePagination from "../pagination/TablePagination";
 import type { Test } from "../../types/test";
 
@@ -22,13 +12,7 @@ const Tareas = ({ questions }: TareasProps) => {
   const [perPage] = useState(10);
 
   return (
-    <Flex
-      color="texto"
-      width="82%"
-      margin="auto"
-      flexDirection="column"
-      pt="5%"
-    >
+    <Flex color="texto" width="82%" margin="auto" flexDirection="column" pt="5%">
       <Text fontSize="25px" fontWeight="bold" mb="30px" color="magenta2">
         Tareas
       </Text>
