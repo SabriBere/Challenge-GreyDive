@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Flex, Text, Grid, Button, Input } from "@chakra-ui/react";
+import { Flex, Text, Grid, Button, Input, InputGroup, InputRightElement } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useQuery } from "@tanstack/react-query";
 import EmptyState from "../components/emptyStates/EmptyState";
 import { getTests } from "../services/test";
 import type { Test } from "../types/test";
+import Close from "../icons/Close";
 
 const Home = () => {
   const [value, setValue] = useState("");
@@ -43,15 +44,22 @@ const Home = () => {
         justifyContent="center"
         alignContent="center"
       >
-        <Flex flexDirection="column" width="55%" margin="auto">
-          <Input
-            placeholder="Buscar testers"
-            variant="flushed"
-            color="navbar"
-            focusBorderColor="violet"
-            size="md"
-            onChange={(e) => setValue(e.target.value)}
-          />
+        <Flex width="55%" margin="auto">
+          <InputGroup>
+            <Input
+              placeholder="Buscar testers"
+              variant="flushed"
+              color="navbar"
+              focusBorderColor="violet"
+              size="md"
+              value={value}
+              paddingRight="3rem"
+              onChange={(e) => setValue(e.target.value)}
+            />
+            {value !== ""  && (<InputRightElement cursor="pointer" onClick={() => setValue("")}>
+              <Close width={24} height={24} />
+            </InputRightElement>)}
+          </InputGroup>
         </Flex>
         <br />
         <br />
