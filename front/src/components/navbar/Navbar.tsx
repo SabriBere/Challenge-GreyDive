@@ -17,9 +17,7 @@ const Navbar = () => {
       justifyContent="center"
     >
       <Text as="h1" color="texto" fontWeight="bold" fontSize="30px">
-        <Link to={"/"}>
-        simulacr.
-        </Link>
+        <Link to={"/"}>simulacr.</Link>
       </Text>
     </Flex>
   );

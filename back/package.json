@@ -5,6 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier . --write --ignore-path ../.prettierignore",
+    "format:check": "prettier . --check --ignore-path ../.prettierignore",
     "test": "echo \"Error: no test specified\" && exit 1",
     "seed": "node ./config/seed.js"
   },
@@ -19,5 +23,12 @@
     "postgres": "^3.3.2",
     "sequelize": "^6.25.7",
     "volleyball": "^1.5.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "eslint": "^9.39.4",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.6.0",
+    "prettier": "^3.8.3"
   }
 }
