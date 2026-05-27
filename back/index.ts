@@ -3,22 +3,27 @@ import cors from "cors";
 import database from "./config/database";
 import routes from "./routes";
 
-const app = express();
-const PORT = process.env.PORT || 8080;
-const HOST = process.env.HOST || "127.0.0.1";
+const PORT = Number(process.env.PORT! ?? 8080);
+const server = express();
 
-app.use(express.json());
-app.use(cors());
-app.use("/api", routes);
+server.use(express.json());
+server.use(cors());
+server.use("/api", routes);
 
-database.sync({ force: false }).then(() => {
-  console.log("db connected");
-  app.listen(Number(PORT), (error) => {
-    if (error) {
-      console.error("Server failed to start", error);
-      process.exit(1);
-    }
+async function startServer() {
+  try {
+    await database.sync({ force: false });
+    console.log("db connected");
+  } catch (error) {
+    console.error("Error connecting to database:", error);
+    process.exit(1);
+  }
 
-    console.log(`Server listening at ${PORT}`);
+  server.listen(PORT, () => {
+    console.log("Environment", process.env.NODE_ENV);
+    console.log("Server listen", PORT);
+    console.log("API version", process.env.npm_package_version);
   });
-});
+}
+
+startServer();

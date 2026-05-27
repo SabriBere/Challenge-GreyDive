@@ -4,15 +4,15 @@
   "description": "",
   "main": "dist/index.js",
   "scripts": {
-    "dev": "tsx watch index.ts",
+    "dev": "dotenvx run -- node --watch --watch-preserve-output -r ts-node/register index.ts",
     "build": "tsc",
-    "start": "node dist/index.js",
+    "start": "dotenvx run -- node dist/index.js",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier . --write --ignore-path ../.prettierignore",
     "format:check": "prettier . --check --ignore-path ../.prettierignore",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "seed": "ts-node ./config/seed.ts"
+    "seed": "dotenvx run -- ts-node ./config/seed.ts"
   },
   "author": "Sabrina Demetrio",
   "license": "ISC",
@@ -28,13 +28,13 @@
   ],
   "dependencies": {
     "cors": "^2.8.5",
-    "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "sequelize": "^6.25.7",
     "sqlite3": "^6.0.1",
     "volleyball": "^1.5.1"
   },
   "devDependencies": {
+    "@dotenvx/dotenvx": "^1.69.1",
     "@eslint/js": "^9.39.4",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
