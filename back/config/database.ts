@@ -1,16 +1,10 @@
 import { Sequelize } from "sequelize";
 import "dotenv/config";
 
-const database = new Sequelize(
-  process.env.DB_NAME || "greydive",
-  process.env.DB_USER || "postgres",
-  process.env.DB_PASSWORD || "1234",
-  {
-    host: process.env.DB_HOST || "localhost",
-    port: Number(process.env.DB_PORT) || 5432,
-    dialect: "postgres",
-    logging: false,
-  }
-);
+const database = new Sequelize({
+  dialect: "sqlite",
+  storage: process.env.SQLITE_STORAGE || "database.sqlite",
+  logging: false,
+});
 
 export default database;
