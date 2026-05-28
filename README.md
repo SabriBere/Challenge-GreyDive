@@ -97,7 +97,7 @@ The backend lives in `back/` and exposes the API consumed by the frontend.
 - Node.js
 - Express
 - TypeScript
-- Sequelize
+- Prisma
 - SQLite
 - dotenvx
 
@@ -113,7 +113,7 @@ cp .env.example .env
 For local development, a typical `.env` looks like:
 
 ```env
-SQLITE_STORAGE=database.sqlite
+DATABASE_URL=file:./prisma.sqlite
 PORT=8080
 NODE_ENV=development
 ```
@@ -131,12 +131,19 @@ npm install
 
 The backend uses mock test data from `back/mocks/test.ts`.
 
+Before seeding a fresh SQLite database, sync the Prisma schema:
+
+```bash
+cd back
+npm run db:push
+```
+
 ```bash
 cd back
 npm run seed
 ```
 
-This creates/syncs the local SQLite database and inserts the mock tests.
+This inserts the mock tests into the local SQLite database.
 
 ### Running Locally 🚀
 
@@ -152,6 +159,16 @@ http://localhost:8080
 ```
 
 The dev command uses `dotenvx` to load `.env` and Node watch mode with `ts-node/register`.
+
+### Prisma 🗄️
+
+The Prisma schema lives in:
+
+```txt
+back/prisma/schema.prisma
+```
+
+The current model is `Cliente`. Its `id` is an auto-incrementing number, so seeded records can be fetched with numeric IDs like `/api/clientes/1`.
 
 ### Build 🏗️
 
@@ -174,6 +191,8 @@ npm run dev
 npm run build
 npm start
 npm run seed
+npm run db:push
+npm run generate
 npm run lint
 npm run format:check
 ```
@@ -183,6 +202,12 @@ npm run format:check
 ```txt
 GET /api/clientes
 GET /api/clientes/:id
+```
+
+Example:
+
+```bash
+curl http://localhost:8080/api/clientes/1
 ```
 
 ## Current Status 🌱
@@ -201,5 +226,6 @@ Known backend cleanup already started:
 
 - Migrated API to TypeScript.
 - Switched persistence from PostgreSQL to SQLite.
+- Replaced Sequelize with Prisma.
 - Added mock-based seed data.
 - Added dotenvx-based environment loading.
