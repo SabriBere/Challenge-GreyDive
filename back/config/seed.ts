@@ -1,11 +1,15 @@
-import database from "./database";
-import Clientes from "../models/Clientes";
+import prisma from "./prisma";
 import { testMocks } from "../mocks/test";
 
 async function seedFunction() {
-  await database.sync({ force: true });
-  await Clientes.bulkCreate(testMocks);
-  await database.close();
+  await prisma.cliente.deleteMany();
+  await prisma.cliente.createMany({
+    data: testMocks.map((test) => ({
+      ...test,
+      preguntas: JSON.stringify(test.preguntas),
+    })),
+  });
+  await prisma.$disconnect();
 }
 
 seedFunction()
@@ -14,4 +18,5 @@ seedFunction()
   })
   .catch((error) => {
     console.error("Error seeding test mocks", error);
+    void prisma.$disconnect();
   });
