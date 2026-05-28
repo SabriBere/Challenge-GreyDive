@@ -1,7 +1,7 @@
 import prisma from "../config/prisma";
 import parseCliente from "../utils/parseCliente";
 
-class clientesService {
+class ClientesService {
   static async allQuestions() {
     try {
       const [count, clientes] = await Promise.all([
@@ -42,4 +42,4 @@ class clientesService {
   }
 }
 
-export default clientesService;
+export default ClientesService;
