@@ -4,6 +4,16 @@ This is a recovered legacy challenge repository. The frontend was originally bui
 
 The project is still being modernized incrementally. It now includes a Vite frontend and a TypeScript backend API.
 
+## Index 📚
+
+- [Frontend](#frontend)
+- [Migration Notes](#migration-notes)
+- [Routing](#routing)
+- [API Expectations](#api-expectations)
+- [Backend](#backend)
+- [Current Status](#current-status)
+
+<a id="frontend"></a>
 ## Frontend ⚛️
 
 The frontend lives in `front/` and is a React application powered by Vite.
@@ -46,6 +56,7 @@ cd front
 npm run preview
 ```
 
+<a id="migration-notes"></a>
 ## Migration Notes 🛠️
 
 This frontend used to depend on Create React App through `react-scripts`. It was migrated to Vite to make the project easier to maintain and to remove deprecated tooling.
@@ -60,6 +71,7 @@ Relevant changes made during the migration:
 - Added a Vite proxy for backend API calls to `http://localhost:8080`.
 - Replaced the old CRA runtime assumptions with Vite-compatible setup.
 
+<a id="routing"></a>
 ## Routing 🧭
 
 The frontend currently exposes:
@@ -71,6 +83,7 @@ The frontend currently exposes:
 
 Invalid routes render a not found state.
 
+<a id="api-expectations"></a>
 ## API Expectations 🔌
 
 The frontend expects a backend running locally at:
@@ -88,6 +101,7 @@ GET /api/clientes
 GET /api/clientes/:id
 ```
 
+<a id="backend"></a>
 ## Backend 🛠️
 
 The backend lives in `back/` and exposes the API consumed by the frontend.
@@ -266,6 +280,7 @@ Example:
 curl http://localhost:8080/api/clientes/1
 ```
 
+<a id="current-status"></a>
 ## Current Status 🌱
 
 This repository is being restored in small steps. Some legacy pieces may still exist and are being reviewed before removal or refactor.
