@@ -10,11 +10,15 @@ export const getTests = async (): Promise<Test[]> => {
   return res.data.data.rows;
 };
 
-export const getTestById = async (id: string): Promise<Test> => {
+export const getClientById = async (id: string): Promise<Test> => {
+  console.log("ID recibido:", id);
+
   const res = await fetchApi({
     method: "get",
     url: `/api/clientes/${id}`,
   });
+
+  console.log("Respuesta:", res.data);
 
   return res.data.data;
 };
