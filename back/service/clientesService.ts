@@ -1,50 +1,43 @@
-import type { Cliente } from "@prisma/client";
 import prisma from "../config/prisma";
-import type { TestMock } from "../mocks/test";
-
-type ServiceResponse<T> = {
-  error: boolean;
-  data: T;
-};
-
-type ClienteResponse = Omit<Cliente, "preguntas"> & {
-  preguntas: TestMock["preguntas"];
-};
-
-const parseCliente = (cliente: Cliente): ClienteResponse => {
-  return {
-    ...cliente,
-    preguntas: JSON.parse(cliente.preguntas) as TestMock["preguntas"],
-  };
-};
+import parseCliente from "../utils/parseCliente";
 
 class clientesService {
-  static async allQuestions(): Promise<
-    ServiceResponse<string | { count: number; rows: ClienteResponse[] }>
-  > {
+  static async allQuestions() {
     try {
       const [count, clientes] = await Promise.all([
         prisma.cliente.count(),
         prisma.cliente.findMany(),
       ]);
 
-      if (!count) return { error: true, data: "List is empty" };
-      return { error: false, data: { count, rows: clientes.map(parseCliente) } };
+      if (!count) return { status: 404, error: true, data: "List is empty" };
+      return { status: 200, error: false, data: { count, rows: clientes.map(parseCliente) } };
     } catch (error) {
-      return { error: true, data: error instanceof Error ? error.message : "Unknown error" };
+      return {
+        status: 500,
+        error: true,
+        data: (error as Error).message,
+      };
     }
   }
 
-  static async aboutClient(id: number): Promise<ServiceResponse<string | ClienteResponse>> {
+  static async aboutClient(id: number) {
     try {
+      if (Number.isNaN(id)) {
+        return { status: 400, error: true, data: "Invalid client id" };
+      }
+
       const data = await prisma.cliente.findUnique({
         where: { id },
       });
 
-      if (!data) return { error: true, data: "Cliente no encontrado" };
-      return { error: false, data: parseCliente(data) };
+      if (!data) return { status: 404, error: true, data: "Cliente no encontrado" };
+      return { status: 200, error: false, data: parseCliente(data) };
     } catch (error) {
-      return { error: true, data: error instanceof Error ? error.message : "Unknown error" };
+      return {
+        status: 500,
+        error: true,
+        data: (error as Error).message,
+      };
     }
   }
 }
