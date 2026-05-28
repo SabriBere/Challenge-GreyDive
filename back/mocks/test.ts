@@ -1,5 +1,4 @@
 export type TestMock = {
-  id: string;
   cliente: string;
   transcripcion: string;
   escenario: string;
@@ -15,7 +14,6 @@ export type TestMock = {
 
 export const testMocks: TestMock[] = [
   {
-    id: "viamo-usability",
     cliente: "Viamo",
     escenario: "Necesitas comprar zapatillas, entonces decides visitar el sitio web de Viamo.",
     linkVideo: "https://dbw7vamj238cm.cloudfront.net/Viamo_challenge.mp4",
@@ -49,7 +47,6 @@ export const testMocks: TestMock[] = [
     ],
   },
   {
-    id: "nebula-usability",
     cliente: "Nebula",
     escenario:
       "Estas buscando comprar un juego de mesas de luz para tu cuarto, entonces decides visitar el sitio web de Nebula.",
@@ -84,7 +81,6 @@ export const testMocks: TestMock[] = [
     ],
   },
   {
-    id: "farmacity-usability",
     cliente: "Farmacity",
     escenario:
       "Necesitas comprar productos de cuidado personal y quieres comparar precios antes de decidir.",
@@ -119,7 +115,6 @@ export const testMocks: TestMock[] = [
     ],
   },
   {
-    id: "mercado-libre-usability",
     cliente: "Mercado Libre",
     escenario:
       "Quieres comprar auriculares inalambricos y comparar opciones por precio, envio y reputacion.",

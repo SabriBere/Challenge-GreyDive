@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import database from "./config/database";
+import prisma from "./config/prisma";
 import routes from "./routes";
 
 const PORT = Number(process.env.PORT! ?? 8080);
@@ -12,7 +12,7 @@ server.use("/api", routes);
 
 async function startServer() {
   try {
-    await database.sync({ force: false });
+    await prisma.$connect();
     console.log("db connected");
   } catch (error) {
     console.error("Error connecting to database:", error);
