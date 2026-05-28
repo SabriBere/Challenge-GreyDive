@@ -14,16 +14,9 @@ const config = {
 export const instance = axios.create(config);
 
 export const fetchApi = async ({ method, url, body }: FetchApiParams) => {
-  try {
-    return await instance.request({
-      method,
-      url,
-      data: body,
-    });
-  } catch (error: any) {
-    console.log("ERROR STATUS:", error.response?.status);
-    console.log("ERROR DATA:", error.response?.data);
-    console.log("ERROR URL:", error.config?.url);
-    throw error;
-  }
+  return await instance.request({
+    method,
+    url,
+    data: body,
+  });
 };

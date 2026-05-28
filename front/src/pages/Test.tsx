@@ -1,4 +1,3 @@
-import React from "react";
 import { Flex } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
@@ -13,7 +12,7 @@ import EmptyState from "../components/emptyStates/EmptyState";
 const Test = () => {
   const { id } = useParams();
   const {
-    data: test,
+    data: questions,
     isSuccess,
     isLoading,
     isError,
@@ -22,10 +21,6 @@ const Test = () => {
     queryFn: () => getClientById(id),
     enabled: !!id,
   });
-
-  const questions = test?.preguntas ?? [];
-
-  console.log(questions, "qué llega");
 
   if (isLoading) {
     return (
@@ -49,10 +44,10 @@ const Test = () => {
   return (
     <>
       {isSuccess && (<Flex flexDirection="column" width="100%" margin="auto">
-        {/* <TituloCliente questions={questions} />
+        <TituloCliente questions={questions} />
         <Reproductor questions={questions} />
         <Tareas questions={questions} />
-        <Transcripciones questions={questions} /> */}
+        <Transcripciones questions={questions} />
       </Flex>)}
     </>
 
