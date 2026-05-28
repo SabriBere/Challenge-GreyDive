@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { getClientById } from "../services/clients";
 import TituloCliente from "../components/titles/TituloCliente";
-import Reproductor from "../components/reproductor/Reproductor";
 import Transcripciones from "../components/buttons/Transcripciones";
 import Tareas from "../components/table/Tareas";
 import EmptyState from "../components/emptyStates/EmptyState";
@@ -45,7 +44,6 @@ const Test = () => {
     <>
       {isSuccess && (<Flex flexDirection="column" width="100%" margin="auto">
         <TituloCliente questions={questions} />
-        <Reproductor questions={questions} />
         <Tareas questions={questions} />
         <Transcripciones questions={questions} />
       </Flex>)}
