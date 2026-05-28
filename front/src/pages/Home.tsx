@@ -3,7 +3,7 @@ import { Flex, Grid, Input, InputGroup, InputRightElement } from "@chakra-ui/rea
 import { motion } from "framer-motion";
 import { useQuery } from "@tanstack/react-query";
 import EmptyState from "../components/emptyStates/EmptyState";
-import { getTests } from "../services/test";
+import { getTests } from "../services/clients";
 import type { Test } from "../types/test";
 import Close from "../icons/Close";
 import HomeCardsSkeleton from "../components/skeletons/HomeCardsSkeleton";

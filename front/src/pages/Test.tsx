@@ -2,25 +2,30 @@ import React from "react";
 import { Flex } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
+import { getClientById } from "../services/clients";
 import TituloCliente from "../components/titles/TituloCliente";
 import Reproductor from "../components/reproductor/Reproductor";
 import Transcripciones from "../components/buttons/Transcripciones";
 import Tareas from "../components/table/Tareas";
 import EmptyState from "../components/emptyStates/EmptyState";
-import { getTestById } from "../services/test";
+
 
 const Test = () => {
   const { id } = useParams();
   const {
-    data: questions,
+    data: test,
+    isSuccess,
     isLoading,
     isError,
   } = useQuery({
-    queryKey: ["test", id],
-    queryFn: () => getTestById(id || ""),
-    enabled: Boolean(id),
-    retry: false,
+    queryKey: ["clientsById", id],
+    queryFn: () => getClientById(id),
+    enabled: !!id,
   });
+
+  const questions = test?.preguntas ?? [];
+
+  console.log(questions, "qué llega");
 
   if (isLoading) {
     return (
@@ -31,7 +36,7 @@ const Test = () => {
     );
   }
 
-  if (isError || !questions?.id) {
+  if (isError || !questions) {
     return (
       <EmptyState
         title={`Test no encontrado`}
@@ -42,12 +47,15 @@ const Test = () => {
   }
 
   return (
-    <Flex flexDirection="column" width="100%" margin="auto">
-      <TituloCliente questions={questions} />
-      <Reproductor questions={questions} />
-      <Tareas questions={questions} />
-      <Transcripciones questions={questions} />
-    </Flex>
+    <>
+      {isSuccess && (<Flex flexDirection="column" width="100%" margin="auto">
+        {/* <TituloCliente questions={questions} />
+        <Reproductor questions={questions} />
+        <Tareas questions={questions} />
+        <Transcripciones questions={questions} /> */}
+      </Flex>)}
+    </>
+
   );
 };
 
