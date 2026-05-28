@@ -10,7 +10,8 @@ export const getTests = async (): Promise<Test[]> => {
   return res.data.data.rows;
 };
 
-export const getTestById = async (id: string): Promise<Test> => {
+export const getClientById = async (id: string): Promise<Test> => {
+
   const res = await fetchApi({
     method: "get",
     url: `/api/clientes/${id}`,

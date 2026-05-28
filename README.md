@@ -127,6 +127,34 @@ cd back
 npm install
 ```
 
+### First-Time Setup ⚙️
+
+When running the project for the first time, create and populate the local SQLite database before starting the API:
+
+```bash
+cd back
+npm run db:push
+npm run seed
+npm run dev
+```
+
+What each command does:
+
+```txt
+npm run db:push  -> Creates/synchronizes the SQLite schema from Prisma.
+npm run seed     -> Inserts the mock test data into the database.
+npm run dev      -> Starts the API server.
+```
+
+If `db:push` or `seed` are skipped, requests such as:
+
+```txt
+GET /api/clientes
+GET /api/clientes/:id
+```
+
+may fail because the required tables or mock data do not exist yet.
+
 ### Seed Mock Data 🌱
 
 The backend uses mock test data from `back/mocks/test.ts`.
@@ -159,6 +187,34 @@ http://localhost:8080
 ```
 
 The dev command uses `dotenvx` to load `.env` and Node watch mode with `ts-node/register`.
+
+### Running the Full Application 🚀
+
+Start the backend first:
+
+```bash
+cd back
+npm run dev
+```
+
+Then start the frontend in a separate terminal:
+
+```bash
+cd front
+npm run dev
+```
+
+Frontend:
+
+```txt
+http://localhost:3000
+```
+
+Backend:
+
+```txt
+http://localhost:8080
+```
 
 ### Prisma 🗄️
 
