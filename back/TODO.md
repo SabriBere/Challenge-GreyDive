@@ -1,3 +1,3 @@
 # TODO
 
-- Migrar a TypeScript y Prisma.
+- Migrar a TypeScript y Prisma. ✅

@@ -1,6 +1,13 @@
 # dependencies
 node_modules/
 
+# build output
+dist/
+
+# local sqlite database
+*.sqlite
+*.sqlite-journal
+
 # npm internals
 .package-lock.json
 
