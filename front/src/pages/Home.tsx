@@ -17,7 +17,7 @@ const Home = () => {
     isSuccess,
     isError,
   } = useQuery({
-    queryKey: ["tests"],
+    queryKey: ["clientTest"],
     queryFn: getTests,
     retry: false,
   });
@@ -29,24 +29,25 @@ const Home = () => {
   return (
     <Flex
       width="100%"
-      height="87.2vh"
+      minH="calc(100vh - 80px)"
       bg="fondo"
       flexDirection="column"
+      alignItems="center"
       justifyContent="center"
-      alignContent="center"
+      px={6}
+      py={12}
     >
       <Flex
         width="100%"
-        margin="auto"
+        maxW="1200px"
         as={motion.div}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition="all .20s ease-out"
         flexDirection="column"
-        justifyContent="center"
-        alignContent="center"
+        alignItems="center"
       >
-        <Flex width="55%" margin="auto">
+        <Flex width="100%" maxW="700px" mb={12}>
           <InputGroup>
             <Input
               placeholder="Buscar testers"
@@ -65,8 +66,7 @@ const Home = () => {
             )}
           </InputGroup>
         </Flex>
-        <br />
-        <br />
+
         {isLoading && <HomeCardsSkeleton />}
 
         {isError && (
@@ -91,14 +91,22 @@ const Home = () => {
         )}
 
         {isSuccess && filteredTests.length > 0 && (
-          <Grid templateColumns="repeat(4, 2fr)" gap={6} width="50%" margin="auto">
-            {filteredTests?.map((info) => {
-              return <HomeCard key={info.id} info={info} />;
-            })}
+          <Grid
+            templateColumns={{
+              base: "1fr",
+              md: "repeat(2, 1fr)",
+            }}
+            gap={8}
+            maxW="900px"
+            mx="auto"
+          >
+            {filteredTests.map((info) => (
+              <HomeCard key={info.id} info={info} />
+            ))}
           </Grid>
         )}
       </Flex>
-    </Flex>
+    </Flex >
   );
 };
 
