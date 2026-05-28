@@ -1,5 +1,10 @@
-import axios from "axios";
-import type { Method } from "axios";
+import axios, { Method } from "axios";
+
+type FetchApiParams = {
+  method: Method;
+  url: string;
+  body?: unknown;
+};
 
 const config = {
   baseURL: "/",
@@ -8,12 +13,10 @@ const config = {
 
 export const instance = axios.create(config);
 
-type FetchApiParams = {
-  method: Method;
-  url: string;
-  body?: unknown;
-};
-
-export const fetchApi = ({ method, url, body }: FetchApiParams) => {
-  return instance[method](url, body);
+export const fetchApi = async ({ method, url, body }: FetchApiParams) => {
+  return await instance.request({
+    method,
+    url,
+    data: body,
+  });
 };
