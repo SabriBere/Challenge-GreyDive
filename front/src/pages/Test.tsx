@@ -7,7 +7,6 @@ import Transcripciones from "../components/buttons/Transcripciones";
 import Tareas from "../components/table/Tareas";
 import EmptyState from "../components/emptyStates/EmptyState";
 
-
 const Test = () => {
   const { id } = useParams();
   const {
@@ -42,13 +41,14 @@ const Test = () => {
 
   return (
     <>
-      {isSuccess && (<Flex flexDirection="column" width="100%" margin="auto">
-        <TituloCliente questions={questions} />
-        <Tareas questions={questions} />
-        <Transcripciones questions={questions} />
-      </Flex>)}
+      {isSuccess && (
+        <Flex flexDirection="column" width="100%" margin="auto">
+          <TituloCliente questions={questions} />
+          <Tareas questions={questions} />
+          <Transcripciones questions={questions} />
+        </Flex>
+      )}
     </>
-
   );
 };
 

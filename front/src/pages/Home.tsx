@@ -106,7 +106,7 @@ const Home = () => {
           </Grid>
         )}
       </Flex>
-    </Flex >
+    </Flex>
   );
 };
 
