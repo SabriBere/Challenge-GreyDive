@@ -8,10 +8,10 @@
     "dev": "dotenvx run -- node --watch --watch-preserve-output -r ts-node/register index.ts",
     "build": "prisma generate && tsc",
     "start": "dotenvx run -- node dist/index.js",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
-    "format": "prettier . --write --ignore-path ../.prettierignore",
-    "format:check": "prettier . --check --ignore-path ../.prettierignore",
+    "lint": "biome lint .",
+    "lint:fix": "biome lint . --write",
+    "format": "biome format --write .",
+    "format:check": "biome format .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "db:push": "dotenvx run -- prisma db push",
     "generate": "prisma generate",
@@ -19,16 +19,7 @@
   },
   "author": "Sabrina Demetrio",
   "license": "ISC",
-  "keywords": [
-    "api",
-    "rest-api",
-    "nodejs",
-    "express",
-    "prisma",
-    "typescript",
-    "backend",
-    "sqlite"
-  ],
+  "keywords": ["api", "rest-api", "nodejs", "express", "prisma", "typescript", "backend", "sqlite"],
   "dependencies": {
     "@prisma/client": "^6.19.3",
     "cors": "^2.8.5",
@@ -36,18 +27,13 @@
     "volleyball": "^1.5.1"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.5.5",
     "@dotenvx/dotenvx": "^1.71.0",
-    "@eslint/js": "^9.39.4",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/node": "^25.9.1",
-    "eslint": "^10.4.1",
-    "eslint-config-prettier": "^10.1.8",
-    "globals": "^17.6.0",
-    "prettier": "^3.8.3",
     "prisma": "^6.19.3",
     "ts-node": "^10.9.2",
-    "typescript": "^6.0.3",
-    "typescript-eslint": "^8.60.1"
+    "typescript": "^6.0.3"
   }
 }
