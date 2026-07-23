@@ -32,8 +32,8 @@ From the repository root:
 
 ```bash
 cd front
-npm install
-npm run dev
+pnpm install
+pnpm run dev
 ```
 
 The app runs at:
@@ -46,14 +46,14 @@ http://localhost:3000
 
 ```bash
 cd front
-npm run build
+pnpm run build
 ```
 
 ### Preview Production Build 👀
 
 ```bash
 cd front
-npm run preview
+pnpm run preview
 ```
 
 <a id="migration-notes"></a>
@@ -138,7 +138,7 @@ The SQLite database file is local-only and ignored by Git.
 
 ```bash
 cd back
-npm install
+pnpm install
 ```
 
 ### First-Time Setup ⚙️
@@ -147,17 +147,17 @@ When running the project for the first time, create and populate the local SQLit
 
 ```bash
 cd back
-npm run db:push
-npm run seed
-npm run dev
+pnpm run db:push
+pnpm run seed
+pnpm run dev
 ```
 
 What each command does:
 
 ```txt
-npm run db:push  -> Creates/synchronizes the SQLite schema from Prisma.
-npm run seed     -> Inserts the mock test data into the database.
-npm run dev      -> Starts the API server.
+pnpm run db:push  -> Creates/synchronizes the SQLite schema from Prisma.
+pnpm run seed     -> Inserts the mock test data into the database.
+pnpm run dev      -> Starts the API server.
 ```
 
 If `db:push` or `seed` are skipped, requests such as:
@@ -177,12 +177,12 @@ Before seeding a fresh SQLite database, sync the Prisma schema:
 
 ```bash
 cd back
-npm run db:push
+pnpm run db:push
 ```
 
 ```bash
 cd back
-npm run seed
+pnpm run seed
 ```
 
 This inserts the mock tests into the local SQLite database.
@@ -191,7 +191,7 @@ This inserts the mock tests into the local SQLite database.
 
 ```bash
 cd back
-npm run dev
+pnpm run dev
 ```
 
 The API runs at:
@@ -208,14 +208,14 @@ Start the backend first:
 
 ```bash
 cd back
-npm run dev
+pnpm run dev
 ```
 
 Then start the frontend in a separate terminal:
 
 ```bash
 cd front
-npm run dev
+pnpm run dev
 ```
 
 Frontend:
@@ -244,27 +244,27 @@ The current model is `Cliente`. Its `id` is an auto-incrementing number, so seed
 
 ```bash
 cd back
-npm run build
+pnpm run build
 ```
 
 ### Start Production Build ▶️
 
 ```bash
 cd back
-npm start
+pnpm start
 ```
 
 ### Backend Scripts 🧪
 
 ```bash
-npm run dev
-npm run build
-npm start
-npm run seed
-npm run db:push
-npm run generate
-npm run lint
-npm run format:check
+pnpm run dev
+pnpm run build
+pnpm start
+pnpm run seed
+pnpm run db:push
+pnpm run generate
+pnpm run lint
+pnpm run format:check
 ```
 
 ### API Endpoints 🔌
