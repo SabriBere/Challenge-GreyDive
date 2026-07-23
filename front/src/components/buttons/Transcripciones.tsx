@@ -7,20 +7,8 @@ type TranscripcionesProps = {
 
 const Transcripciones = ({ questions }: TranscripcionesProps) => {
   return (
-    <Flex
-      color="texto"
-      width="80%"
-      margin="auto"
-      flexDirection="column"
-      pt="3%"
-      pb="10%"
-    >
-      <Text
-        fontSize="25px"
-        fontWeight="bold"
-        mb="25px"
-        color="magenta3"
-      >
+    <Flex color="texto" width="80%" margin="auto" flexDirection="column" pt="3%" pb="10%">
+      <Text fontSize="25px" fontWeight="bold" mb="25px" color="magenta3">
         Transcripción
       </Text>
 

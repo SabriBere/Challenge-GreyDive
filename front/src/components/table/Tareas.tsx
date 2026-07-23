@@ -1,15 +1,5 @@
 import React from "react";
-import {
-  Flex,
-  Text,
-  Table,
-  Thead,
-  Tbody,
-  Tr,
-  Th,
-  Td,
-  TableContainer,
-} from "@chakra-ui/react";
+import { Flex, Text, Table, Thead, Tbody, Tr, Th, Td, TableContainer } from "@chakra-ui/react";
 import type { Test } from "../../types/test";
 
 type TareasProps = {
@@ -54,9 +44,7 @@ const Tareas = ({ questions }: TareasProps) => {
 
                 <Td textAlign="center">
                   <strong>
-                    {task.respuesta !== "respuesta verbal"
-                      ? task.respuesta
-                      : "Respuesta verbal"}
+                    {task.respuesta !== "respuesta verbal" ? task.respuesta : "Respuesta verbal"}
                   </strong>
                 </Td>
               </Tr>
