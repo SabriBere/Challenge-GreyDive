@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
+  "packageManager": "pnpm@11.12.0",
   "scripts": {
     "dev": "dotenvx run -- node --watch --watch-preserve-output -r ts-node/register index.ts",
     "build": "prisma generate && tsc",
