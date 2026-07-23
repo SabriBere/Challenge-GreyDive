@@ -36,18 +36,18 @@
     "volleyball": "^1.5.1"
   },
   "devDependencies": {
-    "@dotenvx/dotenvx": "^1.69.1",
+    "@dotenvx/dotenvx": "^1.71.0",
     "@eslint/js": "^9.39.4",
     "@types/cors": "^2.8.19",
     "@types/express": "^5.0.6",
     "@types/node": "^25.9.1",
-    "eslint": "^9.39.4",
+    "eslint": "^10.4.1",
     "eslint-config-prettier": "^10.1.8",
     "globals": "^17.6.0",
     "prettier": "^3.8.3",
     "prisma": "^6.19.3",
     "ts-node": "^10.9.2",
     "typescript": "^6.0.3",
-    "typescript-eslint": "^8.60.0"
+    "typescript-eslint": "^8.60.1"
   }
 }
